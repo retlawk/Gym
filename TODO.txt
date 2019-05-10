@@ -1,0 +1,19 @@
+DONE -> Homepage: Quote fader
+DONE -> Homepage: Target audience
+DONE -> Homepage: Goals 
+
+DONE -> Upperpage: Training scheme
+DONE -> Upperpage: Table with checks
+        
+DONE -> Lowerpage: Training scheme
+DONE -> Lowerpage: Table with checks
+
+DONE -> Archivepage: Links to all the old schemes
+
+DONE -> Icons lower table fixen
+DONE -> FlyCross voluit
+DONE -> Lower checkboxes bug fix
+
+DONE? -> Mobile, niet scrollbaar naar links/rechts (iets minder breed?)
+Archive mooier maken
+VisualisationsPage: Learn more through visualizations.

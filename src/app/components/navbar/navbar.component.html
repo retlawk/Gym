@@ -1,0 +1,50 @@
+<!--Navbar-->
+<div id="header">
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-sm navbar-dark default-color" [containerInside]="false">
+
+    <!-- Navbar icon -->
+    <a class="navbar-brand" href="#!">
+      <mdb-icon id="dumbbell-icon" fas icon="dumbbell" class="img-fluid ml-2 mt-1" style="color:white"></mdb-icon>
+    </a>
+
+    <!-- <img id="Logo" src="./assets/img/Dumbbell.png" class="rounded float-left" alt="Responsive image"> -->
+
+    <links>
+      <!-- Links left side -->
+      <ul class="navbar-nav" routerLinkActive="active">
+        <li class="nav-item">
+          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/home">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/upper">
+            Upper
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/lower">
+            Lower
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/visuals">
+            Visuals
+          </a>
+        </li> -->
+      </ul>
+
+      <!-- Links right side -->
+      <ul class="navbar-nav ml-auto mr-3">
+        <li class="nav-item">
+          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/archive">
+            Archive
+          </a>
+        </li>
+      </ul>
+
+    </links>
+
+  </mdb-navbar>
+
+</div>

@@ -1,0 +1,17 @@
+fire: <i class="fas fa-fire"></i>
+dumbbell: <i class="fas fa-dumbbell"></i>
+hand: <i class="fas fa-fist-raised"></i>
+dragon: <i class="fas fa-dragon"></i>
+apple: <i class="fas fa-apple-alt"></i>
+chicken: <i class="fas fa-drumstick-bite"></i>
+
+balance: <i class="fas fa-balance-scale"></i>
+
+bed: <i class="fas fa-bed"></i>
+
+battery empty: <i class="fas fa-battery-empty"></i>
+battery half: <i class="fas fa-battery-half"></i>
+battery full: <i class="fas fa-battery-full"></i>
+
+award: <i class="fas fa-award"></i>
+progress: <i class="fas fa-chart-line"></i>

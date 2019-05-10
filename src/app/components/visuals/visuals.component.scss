@@ -1,0 +1,88 @@
+h1 {
+  color: rgb(6, 103, 87);
+}
+
+.chart {
+  height: 30em;
+}
+
+@media only screen and (min-width: 1300px) {
+  #content {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+
+  .title2c {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+
+  .graph2c {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+
+  .title3c {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
+  .graph3c {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #content {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+
+  .title2c {
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+
+  .graph2c {
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+
+  .title3c {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+
+  .graph3c {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #content {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .title2c {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .graph2c {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .title3c {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .graph3c {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
