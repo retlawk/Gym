@@ -13,6 +13,8 @@ import { DaytwoComponent } from './archive-components/daytwo/daytwo.component';
 import { UpperComponent } from './components/upper/upper.component';
 import { LowerComponent } from './components/lower/lower.component';
 import { VisualsComponent } from './components/visuals/visuals.component';
+import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
+import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { VisualsComponent } from './components/visuals/visuals.component';
     DaytwoComponent,
     UpperComponent,
     LowerComponent,
-    VisualsComponent
+    VisualsComponent,
+    Lower2019AprilComponent,
+    Upper2019AprilComponent
   ],
   imports: [
     BrowserModule,

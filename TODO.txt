@@ -1,6 +1,7 @@
 DONE -> Homepage: Quote fader
 DONE -> Homepage: Target audience
 DONE -> Homepage: Goals 
+Homepage: visualizations
 
 DONE -> Upperpage: Training scheme
 DONE -> Upperpage: Table with checks
@@ -15,5 +16,3 @@ DONE -> FlyCross voluit
 DONE -> Lower checkboxes bug fix
 
 DONE? -> Mobile, niet scrollbaar naar links/rechts (iets minder breed?)
-Archive mooier maken
-VisualisationsPage: Learn more through visualizations.

@@ -7,6 +7,8 @@ import { DaytwoComponent } from './archive-components/daytwo/daytwo.component';
 import { UpperComponent } from './components/upper/upper.component';
 import { LowerComponent } from './components/lower/lower.component';
 import { VisualsComponent } from './components/visuals/visuals.component';
+import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
+import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'archive', component: ArchiveComponent },
   { path: 'archive-dayone-april2019', component: DayoneComponent },
   { path: 'archive-daytwo-april2019', component: DaytwoComponent },
+  { path: 'archive-upper2019-april', component: Upper2019AprilComponent },
+  { path: 'archive-lower2019-april', component: Lower2019AprilComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
