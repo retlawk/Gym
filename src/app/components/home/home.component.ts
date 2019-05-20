@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     var quoteFader = d3
       .select("#quoteFader")
       .append("h1")
-      .style("font-size", '3em')
+      .style("font-size", '2em')
       .style("font-family", 'Arial, Helvetica, sans-serif')
       .style("text-align", 'center')
       .style("color", 'rgb(5, 102, 86)');

@@ -1,7 +1,6 @@
 <section id="content" class="text-center my-2">
   <!--Header with dates-->
   <h1 class="h1-responsive font-weight-bold mt-2">Lower</h1>
-  <p class="lead grey-text w-responsive mx-auto">90 minute training</p>
   <p class="lead grey-text w-responsive mx-auto mb-3">13 May 2019 - 21 June 2019</p>
 
   <table class="table .table-responsive">
@@ -16,14 +15,8 @@
 
     <tbody>
       <tr>
-        <td>
-          <i class="fas fa-dragon cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Mat workouts
-          </label>
-        </td>
+        <td (click)="scroll(fire)"><i class="fas fa-fire cyan-text mb-2"></i></td>
+        <td (click)="scroll(fire)"><label style="color:rgb(0,188,212); font-weight: 500;">Mat workouts</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">10</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -33,14 +26,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-dragon cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Standing Oblique Crunch
-          </label>
-        </td>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell cyan-text mb-2"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="color:rgb(0,188,212); font-weight: 500;">Standing Oblique Crunch</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">2</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -50,14 +37,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-key cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Squats
-          </label>
-        </td>
+        <td (click)="scroll(key)"><i class="fas fa-key cyan-text mb-2"></i></td>
+        <td (click)="scroll(key)"><label style="color:rgb(0,188,212); font-weight: 500;">Squats</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">4</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -67,14 +48,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-key cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Standing Overhead Press
-          </label>
-        </td>
+        <td (click)="scroll(key)"><i class="fas fa-key cyan-text mb-2"></i></td>
+        <td (click)="scroll(key)"><label style="color:rgb(0,188,212); font-weight: 500;">Standing Overhead Press</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">4</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -84,14 +59,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-dragon cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Ab Machine
-          </label>
-        </td>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell cyan-text mb-2"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="color:rgb(0,188,212); font-weight: 500;">Ab Machine</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">3</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -101,14 +70,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-gem cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Leg press & Calve Press
-          </label>
-        </td>
+        <td (click)="scroll(gem)"><i class="fas fa-gem cyan-text mb-2"></i></td>
+        <td (click)="scroll(gem)"><label style="color:rgb(0,188,212); font-weight: 500;">Leg press & Calve Press</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">3*</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -118,14 +81,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-dumbbell cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Leg Extensions
-          </label>
-        </td>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell cyan-text mb-2"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="color:rgb(0,188,212); font-weight: 500;">Leg Extensions</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">3</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -135,14 +92,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-key cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Deadlift
-          </label>
-        </td>
+        <td (click)="scroll(key)"><i class="fas fa-key cyan-text mb-2"></i></td>
+        <td (click)="scroll(key)"><label style="color:rgb(0,188,212); font-weight: 500;">Deadlift</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">4</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -152,14 +103,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-dumbbell cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Shoulder press
-          </label>
-        </td>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell cyan-text mb-2"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="color:rgb(0,188,212); font-weight: 500;">Shoulder press</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">3</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -169,14 +114,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-dumbbell cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Dumbbell Walking Lunge
-          </label>
-        </td>
+        <td (click)="scroll(fist)"><i class="fas fa-fist-raised cyan-text mb-2"></i></td>
+        <td (click)="scroll(fist)"><label style="color:rgb(0,188,212); font-weight: 500;">Walking Lunge</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">3</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -186,14 +125,8 @@
         </th>
       </tr>
       <tr>
-        <td>
-          <i class="fas fa-dragon cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label style="color:rgb(0,188,212); font-weight: 500;">
-            Shoulder Hypertrophy
-          </label>
-        </td>
+        <td (click)="scroll(dragon)"><i class="fas fa-dragon cyan-text mb-2"></i></td>
+        <td (click)="scroll(dragon)"><label style="color:rgb(0,188,212); font-weight: 500;">Shoulder Hypertrophy</label></td>
         <td style="color:rgb(0,188,212); font-weight: 500;">∞</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -204,4 +137,49 @@
       </tr>
     </tbody>
   </table>
+
+
+  <div class="row">
+      <div #fire class="col-lg-4 mb-5">
+        <i class="fas fa-fire fa-3x cyan-text mb-2"></i>
+        <h5 class="font-weight-bold title3c">Warming up</h5>
+        <p class="grey-text">Come to the gym by bike to raise the temperature of the body. At the gym warm up with light weights and high intensity.</p>
+      </div>
+  
+      <div #fist class="col-lg-4 mb-5">
+        <i class="fas fa-fist-raised fa-3x cyan-text mb-2"></i>
+        <h5 class="font-weight-bold title3c">Calisthenics</h5>
+        <p class="grey-text">Compound body weight exercises. Suitable for any fitness level and good for your posture. Do as many repetitions as you can.</p>
+      </div>
+  
+      <div #key class="col-lg-4 mb-5">
+        <i class="fas fa-key fa-3x cyan-text mb-2"></i>
+        <h5 class="font-weight-bold title3c">Key compound exercise</h5>
+        <p class="grey-text">The most important exercises for increasing strenght, do a drop set at the end. You should not be able to do more then 6 repetitions. When reaching plateaus, try deloading.</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div #gem class="col-lg-4 mb-5">
+        <i class="fas fa-gem fa-3x cyan-text mb-2"></i>
+        <h5 class="font-weight-bold title3c">Super set</h5>
+        <p class="grey-text">Good exercises to get a lot of sets in your 90 minute workout. Good for muscle size, try to train at +- 70% of your max with 6 to 12 repetitions.</p>
+      </div>
+  
+      <div #dumbbell class="col-lg-4 mb-5">
+        <i class="fas fa-dumbbell fa-3x cyan-text mb-2"></i>
+        <h5 class="font-weight-bold title3c">Normal set</h5>
+        <p class="grey-text">For ease or a little rest we sometimes do a normal set. train at +- 80% of your max with 6 to 12 repetitions.</p>
+      </div>
+  
+      <div #dragon class="col-lg-4 mb-5">
+        <i class="fas fa-dragon fa-3x cyan-text mb-2"></i>
+        <h5 class="font-weight-bold title3c">Endurance hypertrophy</h5>
+        <p class="grey-text">Super series exercise for an opposing superset. No rest between sets, train at +- 70% of your max with 6 to 12 repetitions.</p>
+      </div>
+    </div>
+  
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+
 </section>
