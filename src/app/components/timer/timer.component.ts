@@ -35,7 +35,6 @@ export class TimerComponent implements OnInit {
 
     this.setNumber = 1;
     this.train = true;
-    this.trainOrRest = 'Set: 1';
     this.soundCreated = false;
   }
 
@@ -49,6 +48,7 @@ export class TimerComponent implements OnInit {
     this.inputHidden = true;
     this.timerRunning = true;
 
+    this.trainOrRest = 'Set: 1/' + this.timerSettings.nrOfSets;
     this.pause = 'Pause';
 
     this.timeLeft = this.timerSettings.setDuration;
@@ -69,7 +69,7 @@ export class TimerComponent implements OnInit {
         this.soundCreated = false;
         this.timeLeft = this.timerSettings.setDuration;
         this.train = true;
-        this.trainOrRest = 'Set: ' + this.setNumber;
+        this.trainOrRest = 'Set: ' + this.setNumber + '/' + this.timerSettings.nrOfSets;
       }
       else{
         // rest
@@ -87,7 +87,7 @@ export class TimerComponent implements OnInit {
 
   playStartAudio(){
     let audio = new Audio();
-    audio.src = "../../../assets/audio/start.mp3";
+    audio.src="./assets/audio/start.mp3"
     audio.load();
     audio.play();
   }

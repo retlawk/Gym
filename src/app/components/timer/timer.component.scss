@@ -7,7 +7,12 @@ input {
   margin-left: 35%;
   text-align: center;
 }
-  
+
+#clock {
+  font-family: 'digital-clock-font', 'arial', sans-serif;
+  font-size: 8em;
+}
+
 @media only screen and (min-width: 1000px) {
     #content {
       margin-left: 15em;

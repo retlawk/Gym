@@ -1,7 +1,7 @@
 
 <section id="content" class="text-center my-2">
 
-<h1 class="h1-responsive font-weight-bold text-center text-white p-2 mb-4 info-color-dark">Timer</h1>
+<h1 class="h1-responsive font-weight-bold text-center text-white p-2 mb-4 blue-gradient">Timer</h1>
 
   <div [hidden]="inputHidden">
     <div class="row mt-2 mb-3">
@@ -68,14 +68,13 @@
   <div [hidden]="!inputHidden">
       <h1>{{trainOrRest}}</h1>
       <br>
-      <h1>{{timeLeft | number : '1.2-2'}}</h1> 
+      <h1 id="clock">{{timeLeft | number : '1.2-2'}}</h1> 
       <br>
       <div class="col-md-12 text-center">
         <button (click)='stop()' type="button" class="btn btn-rounded info-color-dark text-white">Stop</button>
         <button (click)='toggle()' type="button" class="btn btn-rounded info-color-dark text-white">{{pause}}</button>
         <button (click)='next()' type="button" class="btn btn-rounded info-color-dark text-white">Next</button>
       </div>
-
   </div>
 
 </section>
