@@ -15,3 +15,5 @@ battery full: <i class="fas fa-battery-full"></i>
 
 award: <i class="fas fa-award"></i>
 progress: <i class="fas fa-chart-line"></i>
+
+clock: <i class="far fa-clock"></i>

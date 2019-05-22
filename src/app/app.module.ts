@@ -15,6 +15,8 @@ import { LowerComponent } from './components/lower/lower.component';
 import { VisualsComponent } from './components/visuals/visuals.component';
 import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
 import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
+import { TimerComponent } from './components/timer/timer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { Upper2019AprilComponent } from './archive-components/upper2019-april/up
     LowerComponent,
     VisualsComponent,
     Lower2019AprilComponent,
-    Upper2019AprilComponent
+    Upper2019AprilComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    NgxEchartsModule
+    NgxEchartsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

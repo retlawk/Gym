@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,12 @@ import * as d3 from 'd3';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.events.subscribe(() => {
+      window.scrollTo(0, 0)
+    });
   }
 
   ngAfterContentInit(): void {
@@ -24,7 +28,7 @@ export class HomeComponent implements OnInit {
       .style("font-size", '2em')
       .style("font-family", 'Arial, Helvetica, sans-serif')
       .style("text-align", 'center')
-      .style("color", 'rgb(5, 102, 86)');
+      .style("color", 'rgb(53, 92, 179)');
 
     repeat();
 

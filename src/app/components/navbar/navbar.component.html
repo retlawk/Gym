@@ -1,6 +1,6 @@
 <!--Navbar-->
 <div id="header">
-  <mdb-navbar SideClass="navbar fixed-top navbar-expand-sm navbar-dark default-color" [containerInside]="false">
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-sm navbar-dark blue-gradient" [containerInside]="false">
 
     <!-- Navbar icon -->
     <a class="navbar-brand" href="#!">
@@ -13,22 +13,27 @@
       <!-- Links left side -->
       <ul class="navbar-nav" routerLinkActive="active">
         <li class="nav-item">
-          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/home">
+          <a class="nav-link waves-light p-2 pl-2 pr-2" mdbWavesEffect routerLink="/home">
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/upper">
+          <a class="nav-link waves-light p-2 pl-2 pr-2" mdbWavesEffect routerLink="/lower">
+            Lower
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light p-2 pl-2 pr-2" mdbWavesEffect routerLink="/upper">
             Upper
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/lower">
-            Lower
+          <a class="nav-link waves-light p-2 pl-2 pr-2" mdbWavesEffect routerLink="/timer">
+            Timer
           </a>
         </li>
         <!-- <li class="nav-item">
-          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/visuals">
+          <a class="nav-link waves-light p-2 pl-2 pr-2" mdbWavesEffect routerLink="/visuals">
             Visuals
           </a>
         </li> -->
@@ -37,7 +42,7 @@
       <!-- Links right side -->
       <ul class="navbar-nav ml-auto mr-3">
         <li class="nav-item">
-          <a class="nav-link waves-light p-2 pl-3" mdbWavesEffect routerLink="/archive">
+          <a class="nav-link waves-light p-2 pl-2 pr-2" mdbWavesEffect routerLink="/archive">
             Archive
           </a>
         </li>

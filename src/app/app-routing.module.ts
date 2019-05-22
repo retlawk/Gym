@@ -9,11 +9,13 @@ import { LowerComponent } from './components/lower/lower.component';
 import { VisualsComponent } from './components/visuals/visuals.component';
 import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
 import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
+import { TimerComponent } from './components/timer/timer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'upper', component: UpperComponent },
   { path: 'lower', component: LowerComponent },
+  { path: 'timer', component: TimerComponent },
   { path: 'visuals', component: VisualsComponent },
   { path: 'archive', component: ArchiveComponent },
   { path: 'archive-dayone-april2019', component: DayoneComponent },

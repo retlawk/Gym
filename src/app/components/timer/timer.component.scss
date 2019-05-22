@@ -1,0 +1,26 @@
+.text-center {
+    text-align: center;
+}
+
+input {
+  width: 30%;
+  margin-left: 35%;
+  text-align: center;
+}
+  
+@media only screen and (min-width: 1000px) {
+    #content {
+      margin-left: 15em;
+      margin-right: 15em;
+      text-align: center;
+    }
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    #content {
+      margin-left: 1em;
+      margin-right: 1em;
+      text-align: center;
+    }
+  }
+  
