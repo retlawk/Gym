@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'archive-daytwo-april2019', component: DaytwoComponent },
   { path: 'archive-upper2019-april', component: Upper2019AprilComponent },
   { path: 'archive-lower2019-april', component: Lower2019AprilComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 
