@@ -20,6 +20,10 @@ export class NavbarComponent implements OnInit {
     let tab = window.location.href.split('/').pop();
     let firstletter = tab.charAt(0).toUpperCase();
     this.currentTab = firstletter + tab.substr(1);
+
+    if (this.currentTab == ""){
+      this.currentTab = "Home";
+    }
   }
 
   onResize() {

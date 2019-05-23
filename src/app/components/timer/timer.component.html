@@ -1,86 +1,53 @@
-
 <section id="content" class="text-center my-2">
 
   <div [hidden]="inputHidden">
-
     <br>
-
     <div class="row mt-2 mb-3">
       <div class="col-lg-3"></div>
-
-      <div class="col-lg-1">
-        <i class="fas fa-clock prefix grey-text fa-2x"></i>
-      </div>
-
-      <div class="col-lg-2 my-auto">
-        <label>Train duration:</label>
-      </div>
-
-      <div class="col-lg-3">
-        <input class="form-control" type="number" id="tbSet" [(ngModel)]="timerSettings.setDuration" value="45" />
-      </div>
-
+      <div class="col-lg-1"><i class="fas fa-clock prefix grey-text fa-2x"></i></div>
+      <div class="col-lg-2 my-auto"><label>Train duration:</label></div>
+      <div class="col-lg-3"><input class="form-control" type="number" id="tbSet" [(ngModel)]="timerSettings.setDuration"
+          value="45" /></div>
       <div class="col-lg-3"></div>
     </div>
-
     <div class="row mb-3">
       <div class="col-lg-3"></div>
-
-      <div class="col-lg-1">
-        <i class="fas fa-bed prefix grey-text fa-2x"></i>
-      </div>
-
-      <div class="col-lg-2 my-auto">
-        <label>Rest duration:</label>
-      </div>
-
-      <div class="col-lg-3">
-        <input class="form-control" type="number" id="tbRest" [(ngModel)]="timerSettings.restDuration" value="15" />
-      </div>
-
+      <div class="col-lg-1"><i class="fas fa-bed prefix grey-text fa-2x"></i></div>
+      <div class="col-lg-2 my-auto"><label>Rest duration:</label></div>
+      <div class="col-lg-3"><input class="form-control" type="number" id="tbRest"
+          [(ngModel)]="timerSettings.restDuration" value="15" /></div>
       <div class="col-lg-3"></div>
     </div>
-
     <div class="row mb-3">
       <div class="col-lg-3"></div>
-
-      <div class="col-lg-1">
-        <i class="fas fa-sort-numeric-up prefix grey-text fa-2x"></i>
-      </div>
-
-      <div class="col-lg-2 my-auto">
-        <label>Nr of sets:</label>
-      </div>
-
-      <div class="col-lg-3">
-        <input class="form-control" type="number" id="tbNrOfSets" [(ngModel)]="timerSettings.nrOfSets">
-      </div>
-
+      <div class="col-lg-1"><i class="fas fa-sort-numeric-up prefix grey-text fa-2x"></i></div>
+      <div class="col-lg-2 my-auto"><label>Nr of sets:</label></div>
+      <div class="col-lg-3"><input class="form-control" type="number" id="tbNrOfSets"
+          [(ngModel)]="timerSettings.nrOfSets"></div>
       <div class="col-lg-3"></div>
     </div>
-
     <br>
-
     <div class="row d-flex align-items-center mb-3 mt-4">
       <div class="col-md-12 text-center">
-        <button (click)="start()" type="button" class="btn btn-rounded z-depth-1a info-color-dark text-white">Start</button>
+        <button (click)="start()" type="button"
+          class="btn btn-rounded z-depth-1a info-color-dark text-white">Start</button>
       </div>
     </div>
   </div>
 
   <div [hidden]="!inputHidden">
-      <br>
-      <br>
-      <h1>{{trainOrRest}}</h1>
-      <br>
-      <h1 id="clock">{{timeLeft | number : '1.2-2'}}</h1> 
-      <br>
-      <div class="col-md-12 text-center">
-        <button (click)='stop()' type="button" class="btn btn-rounded info-color-dark text-white">Stop</button>
-        <button (click)='toggle()' type="button" class="btn btn-rounded info-color-dark text-white">{{pause}}</button>
-        <button (click)='back()' type="button" class="btn btn-rounded info-color-dark text-white">Back</button>
-        <button (click)='next()' type="button" class="btn btn-rounded info-color-dark text-white">Next</button>
-      </div>
+    <br>
+    <br>
+    <h1>{{trainOrRest}}</h1>
+    <br>
+    <h1 id="clock">{{timeLeft | number : '1.2-2'}}</h1>
+    <br>
+    <div class="col-md-12 text-center">
+      <button (click)='stop()' type="button" class="btn btn-rounded info-color-dark text-white">Stop</button>
+      <button (click)='toggle()' type="button" class="btn btn-rounded info-color-dark text-white">{{pause}}</button>
+      <button (click)='back()' type="button" class="btn btn-rounded info-color-dark text-white">Back</button>
+      <button (click)='next()' type="button" class="btn btn-rounded info-color-dark text-white">Next</button>
+    </div>
   </div>
 
 </section>
