@@ -10,3 +10,8 @@ a {
   font-size: 30px;
 }
 
+.navbar-nav > .active > a {
+  color: aqua;
+  background-color: chartreuse;    
+}
+

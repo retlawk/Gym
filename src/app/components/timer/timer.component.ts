@@ -60,6 +60,36 @@ export class TimerComponent implements OnInit {
     this.defaultState();
   }
 
+  back() {
+    if (this.setNumber > 0){
+      if (!this.train){
+        // train
+        this.soundCreated = false;
+        this.timeLeft = this.timerSettings.setDuration;
+        this.train = true;
+        this.trainOrRest = 'Set: ' + this.setNumber + '/' + this.timerSettings.nrOfSets;
+      }
+      else{
+        this.setNumber--;
+
+        if (this.setNumber == 0){
+          this.defaultState();
+          clearInterval(this.interval);
+        }
+
+        // rest
+        this.timeLeft = this.timerSettings.restDuration;
+        this.train = false;
+        this.trainOrRest = 'Rest';
+      }
+    }
+    else {
+      //Timer done
+      this.defaultState();
+      clearInterval(this.interval);
+    }
+  }
+
   next() {
     if (this.setNumber < this.timerSettings.nrOfSets){
       if (!this.train){
