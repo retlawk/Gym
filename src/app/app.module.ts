@@ -16,7 +16,7 @@ import { VisualsComponent } from './components/visuals/visuals.component';
 import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
 import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
 import { TimerComponent } from './components/timer/timer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     NgxEchartsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

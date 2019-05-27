@@ -1,6 +1,6 @@
 export class TimerSettings {
     type: string;
-    setDuration: number;
+    trainDuration: number;
     restDuration: number;
     nrOfSets: number;
 }
