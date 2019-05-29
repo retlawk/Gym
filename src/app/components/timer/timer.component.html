@@ -39,13 +39,14 @@
 
   <div [hidden]="!inputHidden">
     <br>
-    <h1>{{lblTrainRest}}</h1>
-    <br>
+    <div id="lblTrainRest" class="col-md-12 text-center">
+      {{lblTrainRest}}
+    </div>
     <h1 id="clock">{{timeLeft | timerFormat}}</h1>
     <br>
     <div id="lblSetNr" class="col-md-12 text-center">
       <i (click)='back()' class="fas blue-grey-text fa-angle-double-left mr-2"></i>
-      {{lblSetNumber}} : {{lblNrOfSets}}
+      {{lblSetNumber}}/{{lblNrOfSets}}
       <i (click)='next()' class="fas blue-grey-text fa-angle-double-right ml-2"></i>
     </div>
     <br>

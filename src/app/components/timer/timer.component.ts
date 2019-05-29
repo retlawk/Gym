@@ -108,8 +108,7 @@ export class TimerComponent implements OnInit {
   }
 
   stop() {
-    clearInterval(this.interval);
-    this.defaultState();
+    this.timerDone();
   }
 
   back() {
@@ -117,21 +116,14 @@ export class TimerComponent implements OnInit {
     this.noiseMade = false;
 
     if (this.setNumber < 1) {
-      //Timer done, back to menu
-      this.defaultState();
-      clearInterval(this.interval);
+      this.timerDone();
     }
 
     if (this.setNumber % 2 === 0) {
-      //rest
-      this.timeLeft = this.timerSettings.restDuration;
-      this.lblTrainRest = 'Rest';
+      this.rest();
     }
     else {
-      //train
-      this.timeLeft = this.timerSettings.trainDuration;
-      this.lblSetNumber = ((this.setNumber + 1) / 2).toString();
-      this.lblTrainRest = 'Train';
+      this.train();
     }
   }
 
@@ -140,22 +132,40 @@ export class TimerComponent implements OnInit {
     this.noiseMade = false;
 
     if (this.setNumber === this.nrOfIterations) {
-      //Timer done, back to menu
-      this.defaultState();
-      clearInterval(this.interval);
+      this.timerDone();
     }
 
     if (this.setNumber % 2 === 0) {
-      //rest
-      this.timeLeft = this.timerSettings.restDuration;
-      this.lblTrainRest = 'Rest';
+      this.rest();
     }
     else {
-      //train
-      this.timeLeft = this.timerSettings.trainDuration;
-      this.lblSetNumber = ((this.setNumber + 1) / 2).toString();
-      this.lblTrainRest = 'Train';
+      this.train();
     }
+  }
+
+  rest() {
+    //let content = document.getElementById('content');
+    //content.style.background = "green";
+
+    this.timeLeft = this.timerSettings.restDuration;
+    this.lblTrainRest = 'Rest';
+  }
+
+  train() {
+    //let content = document.getElementById('content');
+    //content.style.background = "red";
+
+    this.timeLeft = this.timerSettings.trainDuration;
+    this.lblSetNumber = ((this.setNumber + 1) / 2).toString();
+    this.lblTrainRest = 'Train';
+  }
+
+  timerDone() {
+    //let content = document.getElementById('content');
+    //content.style.background = "white";
+
+    this.defaultState();
+    clearInterval(this.interval);
   }
 
   toggle() {
