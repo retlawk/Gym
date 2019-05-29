@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as NoSleep from '../../../assets/js/NoSleep.min.js';
 
 @Component({
   selector: 'app-navbar',
@@ -21,9 +22,22 @@ export class NavbarComponent implements OnInit {
     let firstletter = tab.charAt(0).toUpperCase();
     this.currentTab = firstletter + tab.substr(1);
 
-    if (this.currentTab == ""){
+    if (this.currentTab == "") {
       this.currentTab = "Home";
     }
+  }
+
+  onClickNoSleep() {
+    var noSleep = new NoSleep();
+
+    function enableNoSleep() {
+      noSleep.enable();
+      document.removeEventListener('touchstart', enableNoSleep, false);
+    }
+    
+    // Enable wake lock.
+    // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+    document.addEventListener('touchstart', enableNoSleep, false);
   }
 
   onResize() {

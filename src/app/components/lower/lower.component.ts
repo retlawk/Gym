@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { CheckboxService } from 'src/app/checkbox.service';
 
@@ -8,6 +8,8 @@ import { CheckboxService } from 'src/app/checkbox.service';
   styleUrls: ['./lower.component.scss']
 })
 export class LowerComponent implements OnInit {
+
+  qMark: string;
 
   constructor(private router: Router, private cbService: CheckboxService) { }
 
@@ -38,4 +40,12 @@ export class LowerComponent implements OnInit {
     }
   }
 
+  qMarkClicked(event) {
+    if (this.qMark === event.srcElement.id){
+      this.qMark = '';
+    }
+    else {
+      this.qMark = event.srcElement.id;
+    }
+  }
 }

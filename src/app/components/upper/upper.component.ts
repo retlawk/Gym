@@ -9,6 +9,8 @@ import { CheckboxService } from 'src/app/checkbox.service';
 })
 export class UpperComponent implements OnInit {
 
+  qMark: string;
+  
   constructor(private router: Router, private cbService: CheckboxService) { }
 
   ngOnInit() {
@@ -35,6 +37,15 @@ export class UpperComponent implements OnInit {
     }
     else {
       this.cbService.upperCbsChecked.push(cb);
+    }
+  }
+
+  qMarkClicked(event) {
+    if (this.qMark === event.srcElement.id){
+      this.qMark = '';
+    }
+    else {
+      this.qMark = event.srcElement.id;
     }
   }
 

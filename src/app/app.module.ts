@@ -17,6 +17,7 @@ import { Lower2019AprilComponent } from './archive-components/lower2019-april/lo
 import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TimerFormatPipe } from './pipes/timer-format.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     VisualsComponent,
     Lower2019AprilComponent,
     Upper2019AprilComponent,
-    TimerComponent
+    TimerComponent,
+    TimerFormatPipe
   ],
   imports: [
     BrowserModule,

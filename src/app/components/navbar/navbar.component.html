@@ -1,10 +1,10 @@
 <!--Navbar-->
-<div id="header">
+<div id="header" (click)="onClickNoSleep()">
   <mdb-navbar SideClass="navbar fixed-top navbar-expand-sm navbar-dark blue-gradient" [containerInside]="false">
 
     <!-- Navbar icon -->
     <a class="navbar-brand">
-      <mdb-icon id="dumbbell-icon" fas icon="dumbbell" class="img-fluid ml-2 mt-1" style="color:white"></mdb-icon>
+      <mdb-icon id="dumbbell-icon" fas icon="dumbbell" class="img-fluid ml-1 mt-1" style="color:white"></mdb-icon>
     </a>
 
     <h1 [hidden]="currentTabHidden" class="h1-responsive font-weight-bold text-center text-white pt-3 pr-2">

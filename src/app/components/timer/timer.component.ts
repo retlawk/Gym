@@ -10,8 +10,11 @@ import { Router } from '@angular/router';
 export class TimerComponent implements OnInit {
 
   inputHidden: boolean;
+
   lblPauseResume: string;
   lblTrainRest: string;
+  lblSetNumber: string;
+  lblNrOfSets: string;
 
   timerSettings: TimerSettings;
   setNumber: number;
@@ -23,28 +26,27 @@ export class TimerComponent implements OnInit {
   startAudio: HTMLAudioElement;
   doneAudio: HTMLAudioElement;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     this.defaultState();
 
     this.startAudio = new Audio();
-    this.startAudio.src="./assets/audio/start.mp3"
+    this.startAudio.src = "./assets/audio/marioStart.mp3"
     this.startAudio.load();
 
     this.doneAudio = new Audio();
-    this.doneAudio.src="./assets/audio/done.mp3"
+    this.doneAudio.src = "./assets/audio/done.mp3"
     this.doneAudio.load();
   }
 
   defaultState() {
     this.inputHidden = false;
-    this.lblPauseResume = 'Pause';
 
-    this.timerSettings =  new TimerSettings();
+    this.timerSettings = new TimerSettings();
     this.timerSettings.trainDuration = 45;
     this.timerSettings.restDuration = 15;
     this.timerSettings.nrOfSets = 10;
 
-    this.nrOfIterations = this.timerSettings.nrOfSets + this.timerSettings.nrOfSets; 
+    this.nrOfIterations = this.timerSettings.nrOfSets + this.timerSettings.nrOfSets;
     this.setNumber = 0;
     this.noiseMade = false;
   }
@@ -55,12 +57,41 @@ export class TimerComponent implements OnInit {
     });
   }
 
-  changed(event){
-    if (event.srcElement.value < 1){
-      event.srcElement.value = 1;
-    } 
-    else if (event.srcElement.value > 99) {
-      event.srcElement.value = 99;
+  changed(event) {
+    switch (event.srcElement.id) {
+      case "tbSet": {
+        if (event.srcElement.value < 5) {
+          event.srcElement.value = 5;
+          this.timerSettings.trainDuration = 5;
+        }
+        else if (event.srcElement.value > 99) {
+          event.srcElement.value = 99;
+          this.timerSettings.trainDuration = 99;
+        }
+        break;
+      }
+      case "tbRest": {
+        if (event.srcElement.value < 5) {
+          event.srcElement.value = 5;
+          this.timerSettings.restDuration = 5;
+        }
+        else if (event.srcElement.value > 99) {
+          event.srcElement.value = 99;
+          this.timerSettings.restDuration = 99;
+        }
+        break;
+      }
+      case "tbNrOfSets": {
+        if (event.srcElement.value < 1) {
+          event.srcElement.value = 1;
+          this.timerSettings.nrOfSets = 1;
+        }
+        else if (event.srcElement.value > 99) {
+          event.srcElement.value = 99;
+          this.timerSettings.nrOfSets = 99;
+        }
+        break;
+      }
     }
   }
 
@@ -68,6 +99,9 @@ export class TimerComponent implements OnInit {
     this.inputHidden = true;
 
     this.lblTrainRest = 'Get Ready';
+    this.lblPauseResume = 'Pause';
+    this.lblSetNumber = '0';
+    this.lblNrOfSets = this.timerSettings.nrOfSets.toString();
     this.timeLeft = 10;
 
     this.countdown();
@@ -92,11 +126,12 @@ export class TimerComponent implements OnInit {
       //rest
       this.timeLeft = this.timerSettings.restDuration;
       this.lblTrainRest = 'Rest';
-    } 
+    }
     else {
-     //train
-     this.timeLeft = this.timerSettings.trainDuration;
-     this.lblTrainRest = 'Set: ' + ((this.setNumber + 1) / 2) + '/' + this.timerSettings.nrOfSets;
+      //train
+      this.timeLeft = this.timerSettings.trainDuration;
+      this.lblSetNumber = ((this.setNumber + 1) / 2).toString();
+      this.lblTrainRest = 'Train';
     }
   }
 
@@ -104,7 +139,7 @@ export class TimerComponent implements OnInit {
     this.setNumber++;
     this.noiseMade = false;
 
-    if (this.setNumber ===  this.nrOfIterations) {
+    if (this.setNumber === this.nrOfIterations) {
       //Timer done, back to menu
       this.defaultState();
       clearInterval(this.interval);
@@ -114,16 +149,17 @@ export class TimerComponent implements OnInit {
       //rest
       this.timeLeft = this.timerSettings.restDuration;
       this.lblTrainRest = 'Rest';
-    } 
+    }
     else {
       //train
       this.timeLeft = this.timerSettings.trainDuration;
-      this.lblTrainRest = 'Set: ' + ((this.setNumber + 1) / 2) + '/' + this.timerSettings.nrOfSets;
+      this.lblSetNumber = ((this.setNumber + 1) / 2).toString();
+      this.lblTrainRest = 'Train';
     }
   }
 
   toggle() {
-    if (this.lblPauseResume === 'Pause'){
+    if (this.lblPauseResume === 'Pause') {
       this.lblPauseResume = 'Resume'
       clearInterval(this.interval);
     }
@@ -135,20 +171,20 @@ export class TimerComponent implements OnInit {
 
   countdown() {
     this.interval = setInterval(() => {
-      if (this.setNumber % 2 === 0 && this.noiseMade === false && this.timeLeft < 0.1) {
+      if (this.setNumber % 2 === 0 && this.noiseMade === false && this.timeLeft < 4) {
         this.startAudio.play();
         this.noiseMade = true;
       }
-      else if (this.setNumber % 2 !== 0 && this.noiseMade === false && this.timeLeft < 0.1) {
+      else if (this.setNumber % 2 !== 0 && this.noiseMade === false && this.timeLeft < 1) {
         this.doneAudio.play();
         this.noiseMade = true;
       }
-      if(this.timeLeft > 0) {
+      if (this.timeLeft > 0) {
         this.timeLeft = this.timeLeft - 0.01;
-      } 
+      }
       else {
         this.next();
       }
-    },10)
+    }, 10)
   }
 }

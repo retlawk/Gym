@@ -11,10 +11,17 @@ p {
   text-align: center;
 }
 
+.infobox{
+  visibility: visible;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.10);
+  -webkit-transition: visibility 0s .4s, opacity .4s 0s;
+          transition: visibility 0s .4s, opacity .4s 0s;
+}
+
 @media only screen and (min-width: 1000px) {
   #content {
-    margin-left: 15em;
-    margin-right: 15em;
+    margin-left: 10em;
+    margin-right: 10em;
   }
 }
 

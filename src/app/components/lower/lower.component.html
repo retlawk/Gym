@@ -125,7 +125,7 @@
       </tr>
       <tr>
         <td (click)="scroll(dragon)"><i class="fas fa-dragon blue-text mb-2"></i></td>
-        <td (click)="scroll(dragon)"><label style="font-weight: 500;">Shoulder Hypertrophy</label></td>
+        <td (click)="scroll(dragon)"><label style="font-weight: 500;">Shoulder Endurance</label></td>
         <td style="font-weight: 500;">∞</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
@@ -138,46 +138,69 @@
   </table>
 
   <div class="row">
-      <div #fire class="col-lg-4 mb-5">
-        <i class="fas fa-fire fa-3x blue-text mb-2"></i>
-        <h5 class="font-weight-bold title3c">Warming up</h5>
-        <p class="grey-text">Come to the gym by bike to raise the temperature of the body. At the gym warm up with light weights and high intensity.</p>
+    <div #fire class="col-lg-4 mb-5">
+      <i class="fas fa-fire fa-3x blue-text mb-2"></i>
+      <h5 class="font-weight-bold title3c">Warming up - Endurance <i id="warmingupQmark" (click)=qMarkClicked($event) class="far blue-grey-text fa-question-circle"></i></h5> 
+      <div class="infobox" *ngIf="qMark === 'warmingupQmark'">
+          <p>Endurance means doing sets with more then 15 repetitions.</p>
       </div>
-  
-      <div #fist class="col-lg-4 mb-5">
-        <i class="fas fa-fist-raised fa-3x blue-text mb-2"></i>
-        <h5 class="font-weight-bold title3c">Calisthenics</h5>
-        <p class="grey-text">Compound body weight exercises. Suitable for any fitness level and good for your posture. Do as many repetitions as you can.</p>
-      </div>
-  
-      <div #key class="col-lg-4 mb-5">
-        <i class="fas fa-key fa-3x blue-text mb-2"></i>
-        <h5 class="font-weight-bold title3c">Key compound exercise</h5>
-        <p class="grey-text">The most important exercises for increasing strenght, do a drop set at the end. You should not be able to do more then 6 repetitions. When reaching plateaus, try deloading.</p>
-      </div>
+      <p class="grey-text">Bike to the gym. At the gym use light weight and high intensity.</p>
     </div>
-  
-    <div class="row">
-      <div #gem class="col-lg-4 mb-5">
-        <i class="fas fa-gem fa-3x blue-text mb-2"></i>
-        <h5 class="font-weight-bold title3c">Super set</h5>
-        <p class="grey-text">Good exercises to get a lot of sets in your 90 minute workout. Good for muscle size, try to train at +- 70% of your max with 6 to 12 repetitions.</p>
+
+    <div #fist class="col-lg-4 mb-5">
+      <i class="fas fa-fist-raised fa-3x blue-text mb-2"></i>
+      <h5 class="font-weight-bold title3c">Calisthenics - Hypertrophy <i id="bodyweightQmark" (click)=qMarkClicked($event) class="far blue-grey-text fa-question-circle"></i></h5> 
+      <div class="infobox" *ngIf="qMark === 'bodyweightQmark'">
+          <p>Hypertrophy means doing sets between the 6 and 15 repetitions.</p>
       </div>
-  
-      <div #dumbbell class="col-lg-4 mb-5">
-        <i class="fas fa-dumbbell fa-3x blue-text mb-2"></i>
-        <h5 class="font-weight-bold title3c">Normal set</h5>
-        <p class="grey-text">For ease or a little rest we sometimes do a normal set. train at +- 80% of your max with 6 to 12 repetitions.</p>
-      </div>
-  
-      <div #dragon class="col-lg-4 mb-5">
-        <i class="fas fa-dragon fa-3x blue-text mb-2"></i>
-        <h5 class="font-weight-bold title3c">Endurance hypertrophy</h5>
-        <p class="grey-text">Super series exercise for an opposing superset. No rest between sets, train at +- 70% of your max with 6 to 12 repetitions.</p>
-      </div>
+      <p class="grey-text">Train with the weight of your own body, average amount of rest between sets.</p>
     </div>
-  
-    <br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br>
+
+    <div #key class="col-lg-4 mb-5">
+      <i class="fas fa-key fa-3x blue-text mb-2"></i>
+      <h5 class="font-weight-bold title3c">Key sets - Strenght <i id="keysetQmark" (click)=qMarkClicked($event) class="far blue-grey-text fa-question-circle"></i></h5> 
+      <div class="infobox" *ngIf="qMark === 'keysetQmark'">
+          <p>Strenght means doing sets with less then 6 repetitions.</p>
+      </div>
+      <p class="grey-text">Go heavy, do a drop set at the end. Go for 95% of max, longer resting periods between sets.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div #gem class="col-lg-4 mb-5">
+      <i class="fas fa-gem fa-3x blue-text mb-2"></i>
+      <h5 class="font-weight-bold title3c">Super sets - Hypertrophy <i id="supersetQmark" (click)=qMarkClicked($event) class="far blue-grey-text fa-question-circle"></i></h5> 
+      <div class="infobox" *ngIf="qMark === 'supersetQmark'">
+          <p>Hypertrophy means doing sets between the 6 and 15 repetitions.</p>
+      </div>
+      <p class="grey-text">2 Exercises (sets) in succession. Train at +- 70% of your max, average amount of rest between sets.</p>
+    </div>
+
+    <div #dumbbell class="col-lg-4 mb-5">
+      <i class="fas fa-dumbbell fa-3x blue-text mb-2"></i>
+      <h5 class="font-weight-bold title3c">Normal sets - Hypertrophy <i id="normalsetQmark" (click)=qMarkClicked($event) class="far blue-grey-text fa-question-circle"></i></h5> 
+      <div class="infobox" *ngIf="qMark === 'normalsetQmark'">
+          <p>Hypertrophy means doing sets between the 6 and 15 repetitions.</p>
+      </div>
+      <p class="grey-text">Train at +- 80% of your max, average amount of rest between sets.</p>
+    </div>
+
+    <div #dragon class="col-lg-4 mb-5">
+      <i class="fas fa-dragon fa-3x blue-text mb-2"></i>
+      <h5 class="font-weight-bold title3c">Beastmode sets - Endurance <i id="beastmodeQmark" (click)=qMarkClicked($event) class="far blue-grey-text fa-question-circle"></i></h5> 
+      <div class="infobox" *ngIf="qMark === 'beastmodeQmark'">
+          <p>Endurance means doing sets with more then 15 repetitions.</p>
+      </div>
+      <p class="grey-text">All Exercises (sets) in succession. Train at +- 60% of your max, no rest between sets.
+      </p>
+    </div>
+  </div>
+
+  <h5 class="font-weight-bold">Strenght pyramid</h5> 
+  <div class="row">
+      <div class="col-lg-12 mb-3">
+          <img src="../../../assets/img/pyramid.jpg" class="img-fluid">
+      </div>
+  </div>
 
 </section>
