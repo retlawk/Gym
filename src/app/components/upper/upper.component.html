@@ -8,7 +8,7 @@
         <th>Type</th>
         <th>Exercise</th>
         <th>Sets</th>
-        <th>✓</th>
+        <th (click)='clear()' class="red-text font-weight-bold">X</th>
       </tr>
     </thead>
 
@@ -16,7 +16,7 @@
       <tr >
         <td (click)="scroll(fire)"><i class="fas fa-fire blue-text mb-2"></i></td>
         <td (click)="scroll(fire)"><label style="font-weight: 500;">Warming up</label></td>
-        <td style="font-weight: 500;">X</td>
+        <td style="font-weight: 500;">5</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
             <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="cb1">

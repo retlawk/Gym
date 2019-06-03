@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { CheckboxService } from 'src/app/checkbox.service';
+import { CheckboxService } from 'src/app/services/checkbox.service';
 
 @Component({
   selector: 'app-lower',
@@ -18,7 +18,7 @@ export class LowerComponent implements OnInit {
       window.scrollTo(0, 0)
     });
 
-    this.cbService.lowerCbsChecked.forEach(function (cbId) {
+    this.cbService.getLowerCbs().forEach(function(cbId) {
       document.getElementById(cbId)['checked'] = true;
     });
   }
@@ -30,14 +30,14 @@ export class LowerComponent implements OnInit {
 
   cbCheck(event) {
     let cb = event['srcElement']['id'];
-    if(this.cbService.lowerCbsChecked.some(x => x === cb)) {
-      let cbFromArray = this.cbService.lowerCbsChecked.find(x => x === cb);
-      var index = this.cbService.lowerCbsChecked.indexOf(cbFromArray);
-      if (index !== -1) this.cbService.lowerCbsChecked.splice(index, 1);
-    }
-    else {
-      this.cbService.lowerCbsChecked.push(cb);
-    }
+    this.cbService.toggleLowerCb(cb);
+  }
+
+  clear(){
+    this.cbService.getLowerCbs().forEach(function (cbId) {
+      document.getElementById(cbId)['checked'] = false;
+    });
+    this.cbService.clearLowerCbs();
   }
 
   qMarkClicked(event) {

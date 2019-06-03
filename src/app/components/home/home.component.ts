@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
                   "Building cardiovascular endurance, aka the ability to lose gains.",
                   "Life has it's ups and downs, we call them reps.",
                   "No matter how hard you try, you'll never be as big as your pump.",
+                  "Reps for jesus.",
                   "Bro, do you even lift?"];
   
     let i = 0;

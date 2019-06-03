@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TimerSettings } from 'src/app/timer-settings';
+import { TimerSettings } from 'src/app/classes/timer-settings';
 import { Router } from '@angular/router';
 
 @Component({
@@ -144,26 +144,17 @@ export class TimerComponent implements OnInit {
   }
 
   rest() {
-    //let content = document.getElementById('content');
-    //content.style.background = "green";
-
     this.timeLeft = this.timerSettings.restDuration;
     this.lblTrainRest = 'Rest';
   }
 
   train() {
-    //let content = document.getElementById('content');
-    //content.style.background = "red";
-
     this.timeLeft = this.timerSettings.trainDuration;
     this.lblSetNumber = ((this.setNumber + 1) / 2).toString();
     this.lblTrainRest = 'Train';
   }
 
   timerDone() {
-    //let content = document.getElementById('content');
-    //content.style.background = "white";
-
     this.defaultState();
     clearInterval(this.interval);
   }

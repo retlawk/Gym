@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CheckboxService } from 'src/app/checkbox.service';
+import { CheckboxService } from 'src/app/services/checkbox.service';
 
 @Component({
   selector: 'app-upper',
@@ -18,7 +18,7 @@ export class UpperComponent implements OnInit {
       window.scrollTo(0, 0)
     });
 
-    this.cbService.upperCbsChecked.forEach(function (cbId) {
+    this.cbService.getUpperCbs().forEach(function (cbId) {
       document.getElementById(cbId)['checked'] = true;
     });
   }
@@ -30,14 +30,14 @@ export class UpperComponent implements OnInit {
 
   cbCheck(event) {
     let cb = event['srcElement']['id'];
-    if(this.cbService.upperCbsChecked.some(x => x === cb)) {
-      let cbFromArray = this.cbService.upperCbsChecked.find(x => x === cb);
-      var index = this.cbService.upperCbsChecked.indexOf(cbFromArray);
-      if (index !== -1) this.cbService.upperCbsChecked.splice(index, 1);
-    }
-    else {
-      this.cbService.upperCbsChecked.push(cb);
-    }
+    this.cbService.toggleUpperCb(cb);
+  }
+
+  clear(){
+    this.cbService.getUpperCbs().forEach(function (cbId) {
+      document.getElementById(cbId)['checked'] = false;
+    });
+    this.cbService.clearUpperCbs();
   }
 
   qMarkClicked(event) {
