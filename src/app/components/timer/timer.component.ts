@@ -140,6 +140,8 @@ export class TimerComponent implements OnInit {
   }
 
   stop() {
+    this.startAudio.pause();
+    this.doneAudio.pause();
     this.timerDone();
   }
 
