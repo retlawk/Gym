@@ -1,4 +1,4 @@
-<section id="content" class="text-center my-2">
+<section id="content" class="text-center my-2" (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
 
   <div [hidden]="inputHidden">
     <br>

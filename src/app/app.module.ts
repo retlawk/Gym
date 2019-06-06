@@ -21,6 +21,14 @@ import { Lower2019AprilComponent } from './archive-components/lower2019-april/lo
 import { Upper2019MayComponent } from './archive-components/upper2019-may/upper2019-may.component';
 import { Lower2019MayComponent } from './archive-components/lower2019-may/lower2019-may.component';
 
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+    'swipe': {velocity: 0.4, threshold: 20} // override default settings
+  }
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +54,10 @@ import { Lower2019MayComponent } from './archive-components/lower2019-may/lower2
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [{ 
+    provide: HAMMER_GESTURE_CONFIG, 
+    useClass: MyHammerConfig 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as NoSleep from '../../../assets/js/NoSleep.min.js';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,16 @@ export class NavbarComponent implements OnInit {
   currentTab: string;
   currentTabHidden: boolean;
 
-  constructor() { }
+  constructor(private router: Router) {
+    router.events.forEach((event) => {
+      if(event instanceof NavigationStart) {
+        let tab = event.url.split('/').pop();
+        let firstletter = tab.charAt(0).toUpperCase();
+        let finalTab = firstletter + tab.substr(1);
+        this.currentTab = finalTab.substr(0, 13);
+      }
+    });
+  }
 
   ngOnInit() {
     this.checkScreenSize();
@@ -53,8 +63,5 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  navRouted(event) {
-    this.currentTab = event['srcElement'].textContent;
-  }
 
 }
