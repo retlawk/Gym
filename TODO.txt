@@ -16,3 +16,6 @@ DONE -> FlyCross voluit
 DONE -> Lower checkboxes bug fix
 
 DONE? -> Mobile, niet scrollbaar naar links/rechts (iets minder breed?)
+
+
+Potentiele naam: "G1m"
