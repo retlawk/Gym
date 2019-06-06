@@ -22,6 +22,10 @@ export class NavbarComponent implements OnInit {
         let firstletter = tab.charAt(0).toUpperCase();
         let finalTab = firstletter + tab.substr(1);
         this.currentTab = finalTab.substr(0, 13);
+
+        if (this.currentTab === ""){
+          this.currentTab = "Home";
+        }
       }
     });
   }
