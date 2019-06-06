@@ -18,6 +18,8 @@ import { Upper2019AprilComponent } from './archive-components/upper2019-april/up
 import { TimerComponent } from './components/timer/timer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TimerFormatPipe } from './pipes/timer-format.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { TimerFormatPipe } from './pipes/timer-format.pipe';
     MDBBootstrapModule.forRoot(),
     NgxEchartsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
