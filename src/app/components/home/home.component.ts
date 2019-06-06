@@ -9,24 +9,22 @@ import { EChartOption } from 'echarts';
 })
 export class HomeComponent implements OnInit {
 
-  chart1Opt: EChartOption = {
-    series: [
-      {
-        name: '',
-        type: 'pie',
-        radius: '75%',
-        center: ['45%', '50%'],
-        data: [{ value: 70, name: '70% of healthy \n carbs and fats', itemStyle: { color: 'rgb(135, 181, 56)' } },
-        { value: 30, name: '30% \n protein', itemStyle: { color: 'rgb(66, 103, 178)' } }],
-        itemStyle: {
-          emphasis: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)'
-          }
+  foodPieChart: EChartOption = {
+    series: {
+      name: '',
+      type: 'pie',
+      radius: '75%',
+      center: ['45%', '50%'],
+      data: [{ value: 70, name: '70% of healthy \n carbs and fats', itemStyle: { color: 'rgb(135, 181, 56)' } },
+      { value: 30, name: '30% \n protein', itemStyle: { color: 'rgb(66, 103, 178)' } }],
+      itemStyle: {
+        emphasis: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
         }
       }
-    ]
+    }
   }
 
   private dates = this.generateMonths();
@@ -47,71 +45,55 @@ export class HomeComponent implements OnInit {
 
     for (let i = 1; i < 37; i++) {
       if (i < 13) {
-        currentGain = currentGain + 1;
-        gains.push(currentGain);
+        currentGain = currentGain + 0.9;
+        gains.push(currentGain.toFixed(2));
       }
       else if (i < 25) {
-        currentGain = currentGain + 0.5;
-        gains.push(currentGain);
+        currentGain = currentGain + 0.45;
+        gains.push(currentGain.toFixed(2));
       }
       else {
-        currentGain = currentGain + 0.25;
-        gains.push(currentGain);
+        currentGain = currentGain + 0.22;
+        gains.push(currentGain.toFixed(2));
       }
     }
 
     return gains;
   }
 
-  chart2Opt: EChartOption = {
-    tooltip: {
-      trigger: 'axis',
-      position: function (pt) {
-        return [pt[0], '10%'];
-      }
+  maxGainsBarChart: EChartOption = {
+    grid: 
+    {
+      top: '0%',
+      bottom: '20%'
     },
     xAxis: {
       type: 'category',
-      boundaryGap: false,
-      data: this.dates
+      data: this.dates,
+      name: 'Months',
+      nameLocation: 'center',
+      nameTextStyle: {
+        padding: [7, 0, 0, 0]
+      }
     },
     yAxis: {
       type: 'value',
-      boundaryGap: [0, '100%']
+      show: false
     },
-    dataZoom: [{
-      type: 'inside',
-      start: 0,
-      end: 10
-    }, {
-      start: 0,
-      end: 10,
-      handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-      handleSize: '80%',
-      handleStyle: {
-        color: '#fff',
-        shadowBlur: 3,
-        shadowColor: 'rgba(0, 0, 0, 0.6)',
-        shadowOffsetX: 2,
-        shadowOffsetY: 2
+    tooltip: {
+      formatter: 'At month {b0}<br />you could have {c0}kg<br />of lean muscle gains.',
+      position: [10, 10],
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
       }
-    }],
-    series: [
-      {
-        type: 'line',
-        smooth: true,
-        symbol: 'none',
-        sampling: 'average',
-        itemStyle: {
-          color: 'rgb(244, 66, 66)'
-        },
-        areaStyle: {
-          color:'rgba(244, 66, 66, 200)'
-        },
-        data: this.data
-      }
-    ]
-  }
+    },
+    series: [{
+      data: this.data,
+      type: 'bar',
+      show: false
+    }]
+  };
 
   constructor(private router: Router) { }
 

@@ -173,12 +173,12 @@ export class TimerComponent implements OnInit {
   countdown() {
     this.interval = setInterval(() => {
       if (this.setNumber % 2 === 0 && this.noiseMade === false && this.timeLeft < 4) {
-        this.startAudio.play();
         this.noiseMade = true;
+        this.startAudio.play();
       }
       else if (this.setNumber % 2 !== 0 && this.noiseMade === false && this.timeLeft < 1) {
-        this.doneAudio.play();
         this.noiseMade = true;
+        this.doneAudio.play();
       }
       if (this.timeLeft > 0) {
         this.timeLeft = this.timeLeft - 0.01;

@@ -1,309 +1,103 @@
-<section id="content" class="text-center my-2">
-  <!--Header with dates-->
-  <h1 class="h1-responsive font-weight-bold mt-2">Upper</h1>
-  <p class="lead grey-text w-responsive mx-auto">90 minute training</p>
-  <p class="lead grey-text w-responsive mx-auto mb-3">15 April 2019 - 31 May 2019</p>
-
-  <table class="table .table-responsive">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Exercise</th>
-        <th>Sets</th>
-        <th>Duration</th>
-        <th>✓</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td><i class="fas fa-fire cyan-text mb-2"></i></td>
-        <td>
-          <label (click)="scroll(WarmingUp)" style="color:rgb(0,188,212); ">
-            Warming up
-          </label>
-        </td>
-        <td>5</td>
-        <td>5</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck1">
-            <label class="custom-control-label" for="tableDefaultCheck1"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td><i class="fas fa-fist-raised cyan-text mb-2"></i></td>
-        <td>
-          <label (click)="scroll(PullUpsDips)" style="color:rgb(0,188,212); ">
-            Pull ups & Dips
-          </label>
-        </td>
-        <td>4</td>
-        <td>5</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck2">
-            <label class="custom-control-label" for="tableDefaultCheck2"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-key cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(Benchpress)" style="color:rgb(0,188,212); ">
-            Benchpress
-          </label>
-        </td>
-        <td>5</td>
-        <td>10</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3">
-            <label class="custom-control-label" for="tableDefaultCheck3"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-gem cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(InclDumbSqueeze)" style="color:rgb(0,188,212); ">
-            Incline Dumbbell & Squeeze Press
-          </label>
-        </td>
-        <td>6</td>
-        <td>10</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck4">
-            <label class="custom-control-label" for="tableDefaultCheck4"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-gem cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(FlyCross)" style="color:rgb(0,188,212); ">
-            Cable Fly & Low Cable Crossover
-          </label>
-        </td>
-        <td>6</td>
-        <td>10</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck5">
-            <label class="custom-control-label" for="tableDefaultCheck5"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-key cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(RowInclChest)" style="color:rgb(0,188,212); ">
-            Cable Row & Incline Chest
-          </label>
-        </td>
-        <td>8</td>
-        <td>10</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck6">
-            <label class="custom-control-label" for="tableDefaultCheck6"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-gem cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(PullDownShrugs)" style="color:rgb(0,188,212); ">
-            Lat Pull-Down & Shrugs
-          </label>
-        </td>
-        <td>6</td>
-        <td>10</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck7">
-            <label class="custom-control-label" for="tableDefaultCheck7"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-gem cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(BackRowDeltRaises)" style="color:rgb(0,188,212); ">
-            Wide back row & Rear Delt Raises
-          </label>
-        </td>
-        <td>6</td>
-        <td>10</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck8">
-            <label class="custom-control-label" for="tableDefaultCheck8"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-dumbbell cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(BicepCurl)" style="color:rgb(0,188,212); ">
-            Dumbbell Bicep Curl
-          </label>
-        </td>
-        <td>3</td>
-        <td>5</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck9">
-            <label class="custom-control-label" for="tableDefaultCheck9"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-dumbbell cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(SkullCrushers)" style="color:rgb(0,188,212); ">
-            Skull Crushers
-          </label>
-        </td>
-        <td>3</td>
-        <td>5</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck10">
-            <label class="custom-control-label" for="tableDefaultCheck10"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <i class="fas fa-dragon cyan-text mb-2"></i>
-        </td>
-        <td>
-          <label (click)="scroll(BarbellPushDown)" style="color:rgb(0,188,212); ">
-            Barbell Curl & Tricep Pushdown
-          </label>
-        </td>
-        <td>*</td>
-        <td>*</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="tableDefaultCheck11">
-            <label class="custom-control-label" for="tableDefaultCheck11"></label>
-          </div>
-        </th>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="row">
-    <div #WarmingUp class="col-lg-6 mb-5 mt-3">
-      <i class="fas fa-fire fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title2c">Warming up</h5>
-      <p class="nrOfSetsInfo grey-text">5 different sets in a row - 5 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text2c">Warm up your upper body with low weights and a standing position. Do Rear
-        Delt Raises, Side Lateral Raises, Standing Shoulder Press, Biceps Curls, Overhead Tricep Extensions.</p>
+<div id="cv" class="instaFade">
+    <div class="mainDetails">
+  
+      <div id="name">
+        <h1 class="quickFade delayTwo">Day one</h1>
+        <br>
+        <h2 class="quickFade delayThree">Chest, Back, Lats & Arms</h2>
+      </div>
+  
+      <div id="contactDetails" class="quickFade delayFour">
+        <ul>
+          <li>From: 15 April 2019</li>
+          <li>Till: 31 May 2019</li>
+        </ul>
+      </div>
+  
+      <div class="clear"></div>
     </div>
-
-    <div #PullUpsDips class="col-lg-6 mb-5 mt-3">
-      <i class="fas fa-fist-raised fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title2c">Pull ups & Dips</h5>
-      <p class="nrOfSetsInfo grey-text">2 supersets - 5 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text2c">Pull up form: shoulder-width grip, pull your elbows to the floor & go all
-        the way.
-        Dip form: straighten your arms, dip below your elbows & lock your elbows at top.</p>
+  
+    <div id="mainArea" class="quickFade delayFive">
+      <section>
+        <div class="sectionTitle">
+          <h1>Warming up</h1>
+        </div>
+  
+        <div class="sectionContent">
+          <article>
+            <h2>Pull-ups & Dips</h2>
+            <p class="subDetails">Super Set: 2 Sets </p>
+            <h2>Weights</h2>
+            <p class="subDetails">Warming up</p>
+          </article>
+        </div>
+        <div class="clear"></div>
+      </section>
+  
+      <section>
+        <div class="sectionTitle">
+          <h1>Chest</h1>
+        </div>
+  
+        <div class="sectionContent">
+          <article>
+            <h2>Benchpress</h2>
+            <p class="subDetails">Key Workout: 5 Sets - Pyramid With Drop</p>
+            <h2>Incline Dumbbell Press & Dumbbell Squeeze Press</h2>
+            <p class="subDetails">Super Set: 3 Sets - The 80% Rule</p>
+            <h2>Cable Fly & Low Cable Crossover</h2>
+            <p class="subDetails">Super Set: 3 Sets - The 80% Rule</p>
+            <h2>Incline Chest Machine</h2>
+            <p class="subDetails">3 Sets - The 80% Rule</p>
+          </article>
+        </div>
+        <div class="clear"></div>
+      </section>
+  
+      <section>
+        <div class="sectionTitle">
+          <h1>Back &</h1>
+          <h1>Lats</h1>
+        </div>
+  
+        <div class="sectionContent">
+          <article>
+            <h2>Seated Cable Row</h2>
+            <p class="subDetails">Key Workout: 5 Sets - Pyramid With Drop</p>
+            <h2>Pull ups & Dumbbell Fly Rear Delt</h2>
+            <p class="subDetails">Power Set: 3 Sets - The 80% Rule</p>
+            <h2>Lat Pull-Down & Shrugs</h2>
+            <p class="subDetails">Power Set: 3 Sets - The 80% Rule</p>
+          </article>
+        </div>
+        <div class="clear"></div>
+      </section>
+  
+      <section>
+        <div class="sectionTitle">
+          <h1>Biceps &</h1>
+          <h1>Triceps</h1>
+        </div>
+  
+        <div class="sectionContent">
+          <article>
+            <h2>Dumbbell Bicep curl & Skull Crushers</h2>
+            <p class="subDetails">Power Set: 3 Sets - The 80% Rule</p>
+            <h2>Barbell Curl & Tricep Pushdown</h2>
+            <p class="subDetails">HyperTrophy: 6+ Sets - 50% of max</p>
+          </article>
+        </div>
+        <div class="clear"></div>
+      </section>
     </div>
   </div>
-
-  <div class="row">
-    <div #Benchpress class="col-lg-4 mb-5">
-      <i class="fas fa-key fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Benchpress</h5>
-      <p class="nrOfSetsInfo grey-text">Pyramid with drop, 5 sets - 10 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Key workout, focus on weight & drop the last set. Benchpress form:
-        medium grip, thumbs around the bar, lower the bar to your mid chest.</p>
-    </div>
-
-    <div #InclDumbSqueeze class="col-lg-4 mb-5">
-      <i class="fas fa-gem fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Incline Dumbbell & Squeeze Press</h5>
-      <p class="nrOfSetsInfo grey-text">3 supersets - 10 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Do the Incline Dumbbell Press at 80% of your max. When all reps are done
-        continue with the Dumbbell Squeeze Press on 60% of your max.</p>
-    </div>
-
-    <div #FlyCross class="col-lg-4 mb-5">
-      <i class="fas fa-gem fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Cable Fly & Low Cable Crossover</h5>
-      <p class="nrOfSetsInfo grey-text">3 supersets - 10 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Do the Cable Fly at 80% of your max. When all reps are done continue with
-        the Low Cable Crossover.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div #RowInclChest class="col-lg-4 mb-5">
-      <i class="fas fa-key fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Cable Row & Incline Chest</h5>
-      <p class="nrOfSetsInfo grey-text">4 supersets with drop - 10 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Key workout, focus on weight & drop the last set.</p>
-    </div>
-
-    <div #PullDownShrugs class="col-lg-4 mb-5">
-      <i class="fas fa-gem fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Lat Pull-Down & Shrugs</h5>
-      <p class="nrOfSetsInfo grey-text">3 supersets - 10 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Do the Lat Pull-Down at 80% of your max. Shrugs always with 20kg plates.
-      </p>
-    </div>
-
-    <div #BackRowDeltRaises class="col-lg-4 mb-5">
-      <i class="fas fa-gem fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Wide back row & Rear Delt Raises</h5>
-      <p class="nrOfSetsInfo grey-text">3 supersets - 10 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Do the Wide back row at 80% of your max and the Rear Delt Raises at 60%.
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div #BicepCurl class="col-lg-4 mb-5">
-      <i class="fas fa-dumbbell fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Dumbbell Bicep Curl</h5>
-      <p class="nrOfSetsInfo grey-text">3 sets - 5 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Normal set, 80% of max.</p>
-    </div>
-
-    <div #SkullCrushers class="col-lg-4 mb-5">
-      <i class="fas fa-dumbbell fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Skull Crushers</h5>
-      <p class="nrOfSetsInfo grey-text">3 sets - 5 minutes</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">Normal set, 80% of max.</p>
-    </div>
-
-    <div #BarbellPushDown class="col-lg-4 mb-5">
-      <i class="fas fa-dragon fa-3x cyan-text mb-2"></i>
-      <h5 class="font-weight-bold title3c">Barbell Curl & Tricep Pushdown</h5>
-      <p class="nrOfSetsInfo grey-text">infinite sets - all time that is left</p>
-      <p class="grey-text mb-md-0 mb-3 text3c">hypertrophy, continue untill no pull up can be done.</p>
-    </div>
-  </div>
-
-</section>
+  
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3753241-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
