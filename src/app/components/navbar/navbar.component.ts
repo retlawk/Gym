@@ -39,9 +39,11 @@ export class NavbarComponent implements OnInit {
     if (this.currentTab == "") {
       this.currentTab = "Home";
     }
+
+    this.noSleep();
   }
 
-  onClickNoSleep() {
+  noSleep() {
     var noSleep = new NoSleep();
 
     function enableNoSleep() {

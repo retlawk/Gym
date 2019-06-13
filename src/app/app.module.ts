@@ -20,8 +20,10 @@ import { Upper2019AprilComponent } from './archive-components/upper2019-april/up
 import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
 import { Upper2019MayComponent } from './archive-components/upper2019-may/upper2019-may.component';
 import { Lower2019MayComponent } from './archive-components/lower2019-may/lower2019-may.component';
-
+import { Upper2019JuneComponent } from './archive-components/upper2019-june/upper.component';
+import { Lower2019JuneComponent } from './archive-components/lower2019-june/lower.component';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { RulesComponent } from './components/rules/rules.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -43,7 +45,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     Upper2019AprilComponent,
     Lower2019AprilComponent,
     Upper2019MayComponent,
-    Lower2019MayComponent
+    Lower2019MayComponent,
+    Upper2019JuneComponent,
+    Lower2019JuneComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,

@@ -17,5 +17,7 @@ DONE -> Lower checkboxes bug fix
 
 DONE? -> Mobile, niet scrollbaar naar links/rechts (iets minder breed?)
 
+DONE -> Potentiele naam: "G1m"
 
-Potentiele naam: "G1m"
+DONE -> NoSleep.js op ngOnInit
+DONE -> Setjes per spiergroep secret page.

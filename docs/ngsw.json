@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1559832043393,
+  "timestamp": 1560458047265,
   "index": "/gym/index.html",
   "assetGroups": [
     {
@@ -11,11 +11,11 @@
         "/es2015-polyfills.c5dd28b362270c767b34.js",
         "/favicon.ico",
         "/index.html",
-        "/main.9237d835b1242b5164d7.js",
+        "/main.491ed42f1247e72683b8.js",
         "/polyfills.8bbb231b43165d65d357.js",
         "/runtime.26209474bfa8dc87a77c.js",
         "/scripts.03e042f1f102bf0e2ed8.js",
-        "/styles.d29b4e475cb0315184ac.css"
+        "/styles.adcbeb58db1ddb1acd47.css"
       ],
       "patterns": []
     },
@@ -69,6 +69,7 @@
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
         "/assets/img/favicon.png",
+        "/assets/img/musclegroups.jpg",
         "/assets/img/pyramid.jpg",
         "/assets/js/NoSleep.min.js",
         "/fa-brands-400.2ef8ba3410dcc71578a8.woff",
@@ -137,6 +138,7 @@
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/img/favicon.png": "7e06370e69981d09f9c0745ca54378591938778b",
+    "/assets/img/musclegroups.jpg": "06620f85fd6ea1610ab89b13cace7a6b388d437e",
     "/assets/img/pyramid.jpg": "708818b51768355e2b1790f059f45d2e543595b1",
     "/assets/js/NoSleep.min.js": "0932ce69652e1f8a1ff6826303c8e4788873e5df",
     "/es2015-polyfills.c5dd28b362270c767b34.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
@@ -156,12 +158,12 @@
     "/fa-solid-900.a7140145ebaaf5fb14e4.woff": "964d5b16950adecf14e632adf9270772031ecb9d",
     "/fa-solid-900.ff8d9f8adb0d09f11d48.ttf": "75389055ff16f50e13c46b95da3c59af091f34c1",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "e963e69f67cb412295a7395ffa41ae5ed047bed1",
-    "/main.9237d835b1242b5164d7.js": "5ecbc2a9a33c4743124fd0643a405309b2fe4bf7",
+    "/index.html": "ab9caff5b6c5c87d9eea93891bd2588e4a0dbf54",
+    "/main.491ed42f1247e72683b8.js": "de65ab6a3d12235e803542c208504e557230a127",
     "/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/scripts.03e042f1f102bf0e2ed8.js": "ba281a9af413e5f1a813cfd2d8b99dc9a0245b32",
-    "/styles.d29b4e475cb0315184ac.css": "f486527a4ab54b2bdb250d4428bc976b076420c3"
+    "/styles.adcbeb58db1ddb1acd47.css": "39bc7e3255e14b283b846ddf99ddd3f44d686bb1"
   },
   "navigationUrls": [
     {
