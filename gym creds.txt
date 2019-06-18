@@ -1,0 +1,8 @@
+walter.kuijlaars@gmail.com
+retlawk
+eenkoeligt14uuropeendag
+
+devops ww: kdfbxtpnrdsjpypf
+
+Build to pages
+ng build --prod --output-path docs
