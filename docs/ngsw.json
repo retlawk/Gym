@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1560460307332,
+  "timestamp": 1560843574550,
   "index": "/gym/index.html",
   "assetGroups": [
     {
@@ -11,11 +11,11 @@
         "/es2015-polyfills.c5dd28b362270c767b34.js",
         "/favicon.ico",
         "/index.html",
-        "/main.867f529ecfec87b6ff1f.js",
+        "/main.37a372189bb6ad0d34e2.js",
         "/polyfills.8bbb231b43165d65d357.js",
         "/runtime.26209474bfa8dc87a77c.js",
         "/scripts.03e042f1f102bf0e2ed8.js",
-        "/styles.65fdb2fd644742080dcc.css"
+        "/styles.4665f2d3b34a2b893ef4.css"
       ],
       "patterns": []
     },
@@ -71,6 +71,7 @@
         "/assets/img/favicon.png",
         "/assets/img/musclegroups.jpg",
         "/assets/img/pyramid.jpg",
+        "/assets/img/yoga.jpg",
         "/assets/js/NoSleep.min.js",
         "/fa-brands-400.2ef8ba3410dcc71578a8.woff",
         "/fa-brands-400.5bf145531213545e03ff.svg",
@@ -140,6 +141,7 @@
     "/assets/img/favicon.png": "7e06370e69981d09f9c0745ca54378591938778b",
     "/assets/img/musclegroups.jpg": "06620f85fd6ea1610ab89b13cace7a6b388d437e",
     "/assets/img/pyramid.jpg": "708818b51768355e2b1790f059f45d2e543595b1",
+    "/assets/img/yoga.jpg": "868bcc09b0b345607df268f057f52d21ba6ff2b0",
     "/assets/js/NoSleep.min.js": "0932ce69652e1f8a1ff6826303c8e4788873e5df",
     "/es2015-polyfills.c5dd28b362270c767b34.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
     "/fa-brands-400.2ef8ba3410dcc71578a8.woff": "e046b8b74b6da1ee3a1910072610de5fc717599f",
@@ -158,12 +160,12 @@
     "/fa-solid-900.a7140145ebaaf5fb14e4.woff": "964d5b16950adecf14e632adf9270772031ecb9d",
     "/fa-solid-900.ff8d9f8adb0d09f11d48.ttf": "75389055ff16f50e13c46b95da3c59af091f34c1",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "da8a37de80194da91848c16a9ef1605df6deaafd",
-    "/main.867f529ecfec87b6ff1f.js": "03c9783bbc80afee0d086eae2c7fb5ae7ef16463",
+    "/index.html": "6bd3dc75aec1bc709691fdae430fa3588d493a95",
+    "/main.37a372189bb6ad0d34e2.js": "b7170780ffa749a5960662839a0962737808e027",
     "/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/scripts.03e042f1f102bf0e2ed8.js": "ba281a9af413e5f1a813cfd2d8b99dc9a0245b32",
-    "/styles.65fdb2fd644742080dcc.css": "f14483f832513ea9d5049aa7e2fa7d3f58d73851"
+    "/styles.4665f2d3b34a2b893ef4.css": "12f778c03fc0d8ea666609914c1bc49b43457c06"
   },
   "navigationUrls": [
     {
