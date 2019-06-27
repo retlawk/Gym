@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as NoSleep from '../../../assets/js/NoSleep.min.js';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -45,14 +45,10 @@ export class NavbarComponent implements OnInit {
 
   noSleep() {
     var noSleep = new NoSleep();
-
     function enableNoSleep() {
       noSleep.enable();
       document.removeEventListener('touchstart', enableNoSleep, false);
     }
-    
-    // Enable wake lock.
-    // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
     document.addEventListener('touchstart', enableNoSleep, false);
   }
 

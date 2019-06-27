@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TimerSettings } from 'src/app/classes/timer-settings';
 import { Router, NavigationStart } from '@angular/router';
+import * as NoSleep from '../../../assets/js/NoSleep.min.js';
 
 @Component({
   selector: 'app-timer',
@@ -87,6 +88,17 @@ export class TimerComponent implements OnInit {
     this.router.events.subscribe(() => {
       window.scrollTo(0, 0)
     });
+
+    this.noSleep();
+  }
+
+  noSleep() {
+    var noSleep = new NoSleep();
+    function enableNoSleep() {
+      noSleep.enable();
+      document.removeEventListener('touchstart', enableNoSleep, false);
+    }
+    document.addEventListener('touchstart', enableNoSleep, false);
   }
 
   changed(event) {
@@ -148,6 +160,8 @@ export class TimerComponent implements OnInit {
   back() {
     this.setNumber--;
     this.noiseMade = false;
+    this.startAudio.pause();
+    this.doneAudio.pause();
 
     if (this.setNumber < 1) {
       this.timerDone();
@@ -162,6 +176,8 @@ export class TimerComponent implements OnInit {
   }
 
   next() {
+    this.startAudio.pause();
+    this.doneAudio.pause();
     this.setNumber++;
     this.noiseMade = false;
 

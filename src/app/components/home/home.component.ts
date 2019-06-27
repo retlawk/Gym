@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   maxGainsBarChart: EChartOption = {
-    grid: 
+    grid:
     {
       top: '0%',
       bottom: '20%'
@@ -93,6 +93,52 @@ export class HomeComponent implements OnInit {
       type: 'bar',
       show: false
     }]
+  };
+
+  labelRight = {
+    normal: {
+        position: 'right'
+    }
+  };
+  strenghtChart: EChartOption = {
+    color: ['#6C4675'],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {           
+        type: 'shadow'        
+      }
+    },
+    grid: {
+      top: '0%',
+      bottom: '20%'
+    },
+    xAxis: {
+      type: 'value',
+      position: 'top',
+      splitLine: { lineStyle: { type: 'dashed' } },
+    },
+    yAxis: {
+      type: 'category',
+      axisLine: { show: false },
+      axisLabel: { show: false },
+      axisTick: { show: false },
+      splitLine: { show: false },
+      data: ['Benchpress', 'Shoulderpess', 'Cable rows', 'Squats', 'Deadlifts']
+    },
+    series: [
+      {
+        type: 'bar',
+        label: {
+          normal: {
+            show: true,
+            formatter: '{b}'
+          }
+        },
+        data: [
+          100, 80, 90, 120, 140
+        ]
+      }
+    ]
   };
 
   constructor(private router: Router) { }
