@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { CheckboxService } from 'src/app/services/checkbox.service';
 
 @Component({
-  selector: 'app-upper',
-  templateUrl: './upper.component.html',
-  styleUrls: ['./upper.component.scss']
+  selector: 'app-upper2019-06',
+  templateUrl: './upper2019-06.component.html',
+  styleUrls: ['./upper2019-06.component.scss']
 })
-export class Upper2019JuneComponent implements OnInit {
+export class Upper201906Component implements OnInit {
 
   qMark: string;
   

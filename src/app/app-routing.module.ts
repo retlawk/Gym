@@ -2,32 +2,39 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ArchiveComponent } from './components/archive/archive.component';
-import { UpperComponent } from './components/upper/upper.component';
-import { LowerComponent } from './components/lower/lower.component';
 import { TimerComponent } from './components/timer/timer.component';
-import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
-import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
-import { Upper2019MayComponent } from './archive-components/upper2019-may/upper2019-may.component';
-import { Lower2019MayComponent } from './archive-components/lower2019-may/lower2019-may.component';
 import { QuoteFaderComponent } from './archive-components/quote-fader/quote-fader.component';
-import { RulesComponent } from './components/rules/rules.component';
-import { Lower2019JuneComponent } from './archive-components/lower2019-june/lower.component';
-import { Upper2019JuneComponent } from './archive-components/upper2019-june/upper.component';
+import { RulesComponent } from './archive-components/rules/rules.component';
+import { Day1Component } from './components/day1/day1.component';
+import { Day2Component } from './components/day2/day2.component';
+import { Day3Component } from './components/day3/day3.component';
+import { Day4Component } from './components/day4/day4.component';
+import { Upper201904Component } from './archive-components/upper2019-04/upper2019-04.component';
+import { Lower201904Component } from './archive-components/lower2019-04/lower2019-04.component';
+import { Upper201905Component } from './archive-components/upper2019-05/upper2019-05.component';
+import { Lower201905Component } from './archive-components/lower2019-05/lower2019-05.component';
+import { Upper201906Component } from './archive-components/upper2019-06/upper2019-06.component';
+import { Lower201906Component } from './archive-components/lower2019-06/lower2019-06.component';
+import { Lower201907Component } from './archive-components/lower2019-07/lower2019-07.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'upper', component: UpperComponent },
-  { path: 'lower', component: LowerComponent },
+  { path: 'day1', component: Day1Component },
+  { path: 'day2', component: Day2Component },
+  { path: 'day3', component: Day3Component },
+  { path: 'day4', component: Day4Component },
   { path: 'timer', component: TimerComponent },
   { path: 'rules', component: RulesComponent },
   { path: 'archive', component: ArchiveComponent },
   { path: 'quote-fader', component: QuoteFaderComponent },
-  { path: 'archive-upper2019-april', component: Upper2019AprilComponent },
-  { path: 'archive-lower2019-april', component: Lower2019AprilComponent },
-  { path: 'archive-upper2019-may', component: Upper2019MayComponent },
-  { path: 'archive-lower2019-may', component: Lower2019MayComponent },
-  { path: 'archive-upper2019-june', component: Upper2019JuneComponent },
-  { path: 'archive-lower2019-june', component: Lower2019JuneComponent },
+  { path: 'archive-upper2019-04', component: Upper201904Component },
+  { path: 'archive-lower2019-04', component: Lower201904Component },
+  { path: 'archive-upper2019-05', component: Upper201905Component },
+  { path: 'archive-lower2019-05', component: Lower201905Component },
+  { path: 'archive-upper2019-06', component: Upper201906Component },
+  { path: 'archive-lower2019-06', component: Lower201906Component },
+  { path: 'archive-lower2019-07', component: Lower201907Component },
+  { path: 'archive-lower2019-07', component: Lower201907Component },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];

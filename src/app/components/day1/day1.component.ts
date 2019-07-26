@@ -1,13 +1,13 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CheckboxService } from 'src/app/services/checkbox.service';
 
 @Component({
-  selector: 'app-lower',
-  templateUrl: './lower.component.html',
-  styleUrls: ['./lower.component.scss']
+  selector: 'app-day1',
+  templateUrl: './day1.component.html',
+  styleUrls: ['./day1.component.scss']
 })
-export class Lower2019JuneComponent implements OnInit {
+export class Day1Component implements OnInit {
 
   qMark: string;
 

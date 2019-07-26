@@ -8,22 +8,26 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ArchiveComponent } from './components/archive/archive.component';
-import { UpperComponent } from './components/upper/upper.component';
-import { LowerComponent } from './components/lower/lower.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TimerFormatPipe } from './pipes/timer-format.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { QuoteFaderComponent } from './archive-components/quote-fader/quote-fader.component';
-import { Upper2019AprilComponent } from './archive-components/upper2019-april/upper2019-april.component';
-import { Lower2019AprilComponent } from './archive-components/lower2019-april/lower2019-april.component';
-import { Upper2019MayComponent } from './archive-components/upper2019-may/upper2019-may.component';
-import { Lower2019MayComponent } from './archive-components/lower2019-may/lower2019-may.component';
-import { Upper2019JuneComponent } from './archive-components/upper2019-june/upper.component';
-import { Lower2019JuneComponent } from './archive-components/lower2019-june/lower.component';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { RulesComponent } from './components/rules/rules.component';
+import { RulesComponent } from './archive-components/rules/rules.component';
+import { Upper201904Component } from './archive-components/upper2019-04/upper2019-04.component';
+import { Lower201904Component } from './archive-components/lower2019-04/lower2019-04.component';
+import { Upper201905Component } from './archive-components/upper2019-05/upper2019-05.component';
+import { Lower201905Component } from './archive-components/lower2019-05/lower2019-05.component';
+import { Upper201906Component } from './archive-components/upper2019-06/upper2019-06.component';
+import { Lower201906Component } from './archive-components/lower2019-06/lower2019-06.component';
+import { Upper201907Component } from './archive-components/upper2019-07/upper2019-07.component';
+import { Lower201907Component } from './archive-components/lower2019-07/lower2019-07.component';
+import { Day1Component } from './components/day1/day1.component';
+import { Day2Component } from './components/day2/day2.component';
+import { Day3Component } from './components/day3/day3.component';
+import { Day4Component } from './components/day4/day4.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -37,17 +41,21 @@ export class MyHammerConfig extends HammerGestureConfig  {
     NavbarComponent,
     HomeComponent,
     ArchiveComponent,
-    UpperComponent,
-    LowerComponent,
+    Day1Component,
+    Day2Component,
+    Day3Component,
+    Day4Component,
     TimerComponent,
     TimerFormatPipe,
     QuoteFaderComponent,
-    Upper2019AprilComponent,
-    Lower2019AprilComponent,
-    Upper2019MayComponent,
-    Lower2019MayComponent,
-    Upper2019JuneComponent,
-    Lower2019JuneComponent,
+    Upper201904Component,
+    Lower201904Component,
+    Upper201905Component,
+    Lower201905Component,
+    Upper201906Component,
+    Lower201906Component,
+    Upper201907Component,
+    Lower201907Component,
     RulesComponent
   ],
   imports: [

@@ -1,0 +1,44 @@
+day1:
+Deadlift
+Benchpress
+One Arm Dumbbell Row
+Incline Dumbbell Press
+Wide Grib Pull ups
+Chest Dip
+Face Pulls
+Cable Drag Curl
+Cable Tricep Extension
+
+day2:
+Mat workouts
+Barbell Squat
+Shoulder Press
+Leg & Calve Press
+Upright Row
+Dumbbell Shrug
+Lateral & Front Raises
+Leg Extension Machine
+Leg Curl Machine
+
+day3:
+Bent Over Rows
+Dumbbell Press
+One Arm Cable Row
+Incline Chest Machine
+Wide Grib Pull ups
+Cable Fly & Drag Up
+Wide Grib Row
+Dumbbell Curls
+Overhead Triceps Extension
+
+day4:
+Abs Machine 
+Standing Oblique Crunch
+Wide-Stance Barbell Squat
+Standing Barbell Shoulder Press
+Leg & Calve Press
+Bent-Over Dumbbell Lateral Raise
+Dumbbell Bench Shrugs
+Abductor
+Adductor
+Close Grib Pull Ups
