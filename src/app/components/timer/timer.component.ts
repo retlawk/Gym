@@ -24,7 +24,7 @@ export class TimerComponent implements OnInit {
   interval;
 
   private noiseMade: boolean;
-  private startAudio: HTMLAudioElement;
+  //private startAudio: HTMLAudioElement;
   private doneAudio: HTMLAudioElement;
 
   private swipeCoord?: [number, number];
@@ -33,9 +33,9 @@ export class TimerComponent implements OnInit {
   constructor(private router: Router) {
     this.defaultState();
 
-    this.startAudio = new Audio();
-    this.startAudio.src = "./assets/audio/marioStart.mp3"
-    this.startAudio.load();
+    // this.startAudio = new Audio();
+    // this.startAudio.src = "./assets/audio/marioStart.mp3"
+    // this.startAudio.load();
 
     this.doneAudio = new Audio();
     this.doneAudio.src = "./assets/audio/done.mp3"
@@ -152,7 +152,7 @@ export class TimerComponent implements OnInit {
   }
 
   stop() {
-    this.startAudio.pause();
+    //this.startAudio.pause();
     this.doneAudio.pause();
     this.timerDone();
   }
@@ -160,7 +160,7 @@ export class TimerComponent implements OnInit {
   back() {
     this.setNumber--;
     this.noiseMade = false;
-    this.startAudio.pause();
+    //this.startAudio.pause();
     this.doneAudio.pause();
 
     if (this.setNumber < 1) {
@@ -176,7 +176,7 @@ export class TimerComponent implements OnInit {
   }
 
   next() {
-    this.startAudio.pause();
+    //this.startAudio.pause();
     this.doneAudio.pause();
     this.setNumber++;
     this.noiseMade = false;
@@ -224,7 +224,7 @@ export class TimerComponent implements OnInit {
     this.interval = setInterval(() => {
       if (this.setNumber % 2 === 0 && this.noiseMade === false && this.timeLeft < 4) {
         this.noiseMade = true;
-        this.startAudio.play();
+        this.doneAudio.play(); //start
       }
       else if (this.setNumber % 2 !== 0 && this.noiseMade === false && this.timeLeft < 1) {
         this.noiseMade = true;
