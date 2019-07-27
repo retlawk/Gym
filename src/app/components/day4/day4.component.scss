@@ -1,0 +1,32 @@
+h1 {
+  color: rgb(6, 103, 87);
+}
+
+p {
+  font-size: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.infobox {
+  visibility: visible;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: visibility 0s 0.4s, opacity 0.4s 0s;
+  transition: visibility 0s 0.4s, opacity 0.4s 0s;
+}
+
+@media only screen and (min-width: 1000px) {
+  #content {
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #content {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}

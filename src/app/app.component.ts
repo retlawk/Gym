@@ -30,21 +30,31 @@ export class AppComponent {
         const swipe = direction[0] < 0 ? 'next' : 'previous';
         switch(this.router.url) { 
           case "/home": { 
-             if (swipe === "next") this.router.navigateByUrl("/upper");
+             if (swipe === "next") this.router.navigateByUrl("/day1");
              break; 
           } 
-          case "/upper": { 
+          case "/day1": { 
             if (swipe === "previous") this.router.navigateByUrl("/home");
-            if (swipe === "next") this.router.navigateByUrl("/lower");
+            if (swipe === "next") this.router.navigateByUrl("/day2");
             break; 
           } 
-          case "/lower": { 
-            if (swipe === "previous") this.router.navigateByUrl("/upper");
+          case "/day2": { 
+            if (swipe === "previous") this.router.navigateByUrl("/day1");
+            if (swipe === "next") this.router.navigateByUrl("/day3");
+            break; 
+          } 
+          case "/day3": { 
+            if (swipe === "previous") this.router.navigateByUrl("/day2");
+            if (swipe === "next") this.router.navigateByUrl("/day4");
+            break; 
+          } 
+          case "/day4": { 
+            if (swipe === "previous") this.router.navigateByUrl("/day3");
             if (swipe === "next") this.router.navigateByUrl("/timer");
             break; 
           } 
           case "/timer": { 
-            if (swipe === "previous") this.router.navigateByUrl("/lower");
+            if (swipe === "previous") this.router.navigateByUrl("/day4");
             if (swipe === "next") this.router.navigateByUrl("/archive");
             break; 
           } 

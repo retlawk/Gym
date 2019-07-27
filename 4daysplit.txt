@@ -1,12 +1,17 @@
+Strenght
+Mass
+Endurance
+Calistenics
+Super set
+
 day1:
 Deadlift
 Benchpress
 One Arm Dumbbell Row
 Incline Dumbbell Press
-Wide Grib Pull ups
-Chest Dip
+Wide Grib Pull ups & Chest Dip
 Face Pulls
-Cable Drag Curl
+Cable Drag Curl 
 Cable Tricep Extension
 
 day2:
