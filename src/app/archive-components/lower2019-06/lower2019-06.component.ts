@@ -18,7 +18,7 @@ export class Lower201906Component implements OnInit {
       window.scrollTo(0, 0)
     });
 
-    this.cbService.getLowerCbs().forEach(function(cbId) {
+    this.cbService.getCbs().forEach(function(cbId) {
       document.getElementById(cbId)['checked'] = true;
     });
   }
@@ -30,14 +30,14 @@ export class Lower201906Component implements OnInit {
 
   cbCheck(event) {
     let cb = event['srcElement']['id'];
-    this.cbService.toggleLowerCb(cb);
+    this.cbService.toggleCb(cb);
   }
 
   clear(){
-    this.cbService.getLowerCbs().forEach(function (cbId) {
+    this.cbService.getCbs().forEach(function (cbId) {
       document.getElementById(cbId)['checked'] = false;
     });
-    this.cbService.clearLowerCbs();
+    this.cbService.clearCbs();
   }
 
   qMarkClicked(event) {

@@ -18,8 +18,10 @@ export class Day1Component implements OnInit {
       window.scrollTo(0, 0)
     });
 
-    this.cbService.getLowerCbs().forEach(function(cbId) {
-      document.getElementById(cbId)['checked'] = true;
+    this.cbService.getCbs().forEach(function(cbId) {
+      if (document.getElementById(cbId) !== null){
+        document.getElementById(cbId)['checked'] = true;
+      }
     });
   }
 
@@ -30,14 +32,16 @@ export class Day1Component implements OnInit {
 
   cbCheck(event) {
     let cb = event['srcElement']['id'];
-    this.cbService.toggleLowerCb(cb);
+    this.cbService.toggleCb(cb);
   }
 
   clear(){
-    this.cbService.getLowerCbs().forEach(function (cbId) {
-      document.getElementById(cbId)['checked'] = false;
+    this.cbService.getCbs().forEach(function (cbId) {
+      if (document.getElementById(cbId) !== null && cbId.startsWith('1')) {
+        document.getElementById(cbId)['checked'] = false;
+      }
     });
-    this.cbService.clearLowerCbs();
+    this.cbService.clearCbs();
   }
 
   qMarkClicked(event) {

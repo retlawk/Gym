@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
       radius: '75%',
       center: ['45%', '50%'],
       data: [{ value: 70, name: '70% of healthy \n carbs and fats', itemStyle: { color: 'rgb(135, 181, 56)' } },
-      { value: 30, name: '30% \n protein', itemStyle: { color: 'rgb(66, 103, 178)' } }],
+      { value: 30, name: '30% \n protein', itemStyle: { color: 'rgb(52,89,176)' } }],
       itemStyle: {
         emphasis: {
           shadowBlur: 10,
@@ -62,6 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   maxGainsBarChart: EChartOption = {
+    color: ['rgb(52,89,176)'],
     grid:
     {
       top: '0%',
@@ -101,7 +102,7 @@ export class HomeComponent implements OnInit {
     }
   };
   strenghtChart: EChartOption = {
-    color: ['#6C4675'],
+    color: ['rgb(52,89,176)'],
     tooltip: {
       trigger: 'axis',
       axisPointer: {           
@@ -115,7 +116,10 @@ export class HomeComponent implements OnInit {
     xAxis: {
       type: 'value',
       position: 'top',
-      splitLine: { lineStyle: { type: 'dashed' } },
+      axisLine: { show: false },
+      axisLabel: { show: false },
+      axisTick: { show: false },
+      splitLine: { show: false }
     },
     yAxis: {
       type: 'category',

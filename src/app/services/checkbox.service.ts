@@ -4,13 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CheckboxService {
-  private lowerCbsChecked: Array<string>;
-  private upperCbsChecked: Array<string>;
+  private cbsChecked: Array<string>;
   private localStorage: Storage;
 
   constructor() { 
-    this.lowerCbsChecked = new Array<string>();
-    this.upperCbsChecked = new Array<string>();
+    this.cbsChecked = new Array<string>();
     
     this.localStorage = window.localStorage;
 
@@ -27,56 +25,29 @@ export class CheckboxService {
     }
   }
 
-
-  getLowerCbs(): Array<string> {
-    this.lowerCbsChecked = JSON.parse(this.localStorage.getItem('lowerCbsChecked'));
-    if (this.lowerCbsChecked === undefined || this.lowerCbsChecked === null) {
-      this.lowerCbsChecked = new Array<string>();
+  getCbs(): Array<string> {
+    this.cbsChecked = JSON.parse(this.localStorage.getItem('cbsChecked'));
+    if (this.cbsChecked === undefined || this.cbsChecked === null) {
+      this.cbsChecked = new Array<string>();
     }
-    return this.lowerCbsChecked;
+    return this.cbsChecked;
   }
 
-  toggleLowerCb(cb: string) {
-    if(this.lowerCbsChecked.some(x => x === cb)) {
-      let cbFromArray = this.lowerCbsChecked.find(x => x === cb);
-      var index = this.lowerCbsChecked.indexOf(cbFromArray);
-      if (index !== -1) this.lowerCbsChecked.splice(index, 1);
+  toggleCb(cb: string) {
+    if(this.cbsChecked.some(x => x === cb)) {
+      let cbFromArray = this.cbsChecked.find(x => x === cb);
+      var index = this.cbsChecked.indexOf(cbFromArray);
+      if (index !== -1) this.cbsChecked.splice(index, 1);
     }
     else {
-      this.lowerCbsChecked.push(cb);
+      this.cbsChecked.push(cb);
     }
     
-    this.localStorage.setItem('lowerCbsChecked', JSON.stringify(this.lowerCbsChecked));
+    this.localStorage.setItem('cbsChecked', JSON.stringify(this.cbsChecked));
   }
 
-  clearLowerCbs(): void {
-    this.localStorage.removeItem('lowerCbsChecked');
-    this.lowerCbsChecked = new Array<string>();
-  }
-
-  getUpperCbs(): Array<string> {
-    this.upperCbsChecked = JSON.parse(this.localStorage.getItem('upperCbsChecked'));
-    if (this.upperCbsChecked === undefined || this.upperCbsChecked === null) {
-      this.upperCbsChecked = new Array<string>();
-    }
-    return this.upperCbsChecked;
-  }
-
-  toggleUpperCb(cb: string) {
-    if(this.upperCbsChecked.some(x => x === cb)) {
-      let cbFromArray = this.upperCbsChecked.find(x => x === cb);
-      var index = this.upperCbsChecked.indexOf(cbFromArray);
-      if (index !== -1) this.upperCbsChecked.splice(index, 1);
-    }
-    else {
-      this.upperCbsChecked.push(cb);
-    }
-
-    this.localStorage.setItem('upperCbsChecked', JSON.stringify(this.upperCbsChecked));
-  }
-
-  clearUpperCbs() {
-    this.localStorage.removeItem('upperCbsChecked');
-    this.upperCbsChecked = new Array<string>();
+  clearCbs(): void {
+    this.localStorage.removeItem('cbsChecked');
+    this.cbsChecked = new Array<string>();
   }
 }

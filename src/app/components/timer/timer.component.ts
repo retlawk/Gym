@@ -24,8 +24,7 @@ export class TimerComponent implements OnInit {
   interval;
 
   private noiseMade: boolean;
-  //private startAudio: HTMLAudioElement;
-  private doneAudio: HTMLAudioElement;
+  private noise: HTMLAudioElement;
 
   private swipeCoord?: [number, number];
   private swipeTime?: number;
@@ -33,13 +32,9 @@ export class TimerComponent implements OnInit {
   constructor(private router: Router) {
     this.defaultState();
 
-    // this.startAudio = new Audio();
-    // this.startAudio.src = "./assets/audio/marioStart.mp3"
-    // this.startAudio.load();
-
-    this.doneAudio = new Audio();
-    this.doneAudio.src = "./assets/audio/done.mp3"
-    this.doneAudio.load();
+    this.noise = new Audio();
+    this.noise.src = "./assets/audio/done.mp3"
+    this.noise.load();
 
     router.events.forEach((event) => {
       if(event instanceof NavigationStart) {
@@ -152,16 +147,14 @@ export class TimerComponent implements OnInit {
   }
 
   stop() {
-    //this.startAudio.pause();
-    this.doneAudio.pause();
+    this.noise.load();
     this.timerDone();
   }
 
   back() {
     this.setNumber--;
     this.noiseMade = false;
-    //this.startAudio.pause();
-    this.doneAudio.pause();
+    this.noise.load();
 
     if (this.setNumber < 1) {
       this.timerDone();
@@ -176,8 +169,8 @@ export class TimerComponent implements OnInit {
   }
 
   next() {
-    //this.startAudio.pause();
-    this.doneAudio.pause();
+    this.noise.load();
+
     this.setNumber++;
     this.noiseMade = false;
 
@@ -222,13 +215,13 @@ export class TimerComponent implements OnInit {
 
   countdown() {
     this.interval = setInterval(() => {
-      if (this.setNumber % 2 === 0 && this.noiseMade === false && this.timeLeft < 4) {
+      if (this.setNumber % 2 === 0 && this.noiseMade === false && this.timeLeft < 1) {
         this.noiseMade = true;
-        this.doneAudio.play(); //start
+        this.noise.play(); //start
       }
       else if (this.setNumber % 2 !== 0 && this.noiseMade === false && this.timeLeft < 1) {
         this.noiseMade = true;
-        this.doneAudio.play();
+        this.noise.play();
       }
       if (this.timeLeft > 0) {
         this.timeLeft = this.timeLeft - 0.01;
