@@ -9,7 +9,7 @@ import { LocalStorageService } from 'src/app/services/localstorage.service';
 })
 export class SchemeComponent implements OnInit {
 
-  qMark: string;
+  days: string;
 
   constructor(private router: Router, private storage: LocalStorageService) { }
 
@@ -43,14 +43,4 @@ export class SchemeComponent implements OnInit {
     });
     this.storage.clearCbs();
   }
-
-  qMarkClicked(event) {
-    if (this.qMark === event.srcElement.id){
-      this.qMark = '';
-    }
-    else {
-      this.qMark = event.srcElement.id;
-    }
-  }
-
 }
