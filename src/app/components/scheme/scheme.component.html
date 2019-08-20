@@ -1,10 +1,10 @@
 <section id="content" class="text-center my-2 overflow-auto">
   <div class="btn-group" role="group" aria-label="Basic example">
-    <!-- <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect ng-repeat="(key, value) in controller.greeting.custinfo">{{key}}: {{value}}</button> -->
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect>1</button>
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect>2</button>
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect>3</button>
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect>4</button>
+    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect *ngFor="let day of schemeDays" (click)="open($event)">{{day.name}}</button>
+    <!-- <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">1</button>
+    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">2</button>
+    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">3</button>
+    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">4</button> -->
   </div>
 
   <table class="table .table-responsive">

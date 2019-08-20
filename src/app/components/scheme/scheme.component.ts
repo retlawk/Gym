@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'src/app/services/localstorage.service';
+import { SchemeDay } from 'src/app/classes/scheme-day';
 
 @Component({
   selector: 'app-scheme',
@@ -9,7 +10,12 @@ import { LocalStorageService } from 'src/app/services/localstorage.service';
 })
 export class SchemeComponent implements OnInit {
 
-  days: string;
+  schemeDays: SchemeDay[] = [
+    { id: 11, name: '1' },
+    { id: 12, name: '2' },
+    { id: 13, name: '3' },
+    { id: 14, name: '4' }
+  ]
 
   constructor(private router: Router, private storage: LocalStorageService) { }
 
@@ -23,6 +29,11 @@ export class SchemeComponent implements OnInit {
     //     document.getElementById(cbId)['checked'] = true;
     //   }
     // });
+  }
+
+  public open(event) {
+    console.log('scheme: ' + event.srcElement.innerText);
+    let schemeDay = event.srcElement.innerText;
   }
 
   scroll(el: HTMLElement) {
