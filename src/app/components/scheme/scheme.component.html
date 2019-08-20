@@ -1,10 +1,10 @@
-<section id="content" class="text-center my-2 overflow-auto">
+<section id="content" class="text-center my-2 overflow-hidden">
   <div class="btn-group" role="group" aria-label="Basic example">
     <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect *ngFor="let day of schemeDays"
       (click)="open($event)">{{day.name}}</button>
   </div>
 
-  <table class="table .table-responsive">
+  <table class="table .table-responsive overflow-hidden">
     <thead>
       <tr>
         <th>Type</th>
@@ -15,16 +15,19 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let exercise of currentDay.exercises">
+      <tr *ngFor="let exercise of currentDay.exercises; let i = index">
         <td (click)="scroll(key)" [ngSwitch]="exercise.exerType">
-          <div *ngSwitchCase="exercise.exerType.Strenght"> <i class="fas fa-key blue-text mb-1"></i> </div>
+          <i *ngSwitchCase="'Strenght'" class="fas fa-key blue-text mb-1"></i>
+          <i *ngSwitchCase="'Mass'" class="fas fa-dumbbell blue-text mb-1"></i>
+          <i *ngSwitchCase="'Endurance'" class="fas fa-fire blue-text mb-1"></i>
+          <i *ngSwitchCase="'SuperSet'" class="fas fa-dragon blue-text mb-1"></i>
         </td>
         <td><label style="font-weight: 500;">{{exercise.name}}</label></td>
         <td style="font-weight: 500;">{{exercise.nrOfSets}}</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="{{ 'wave' + i }}">
-            <label class="custom-control-label" for="1cb1"></label>
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="{{i}}">
+            <label class="custom-control-label" for="{{i}}"></label>
           </div>
         </th>
       </tr>
@@ -37,26 +40,22 @@
     <p class="grey-text">Do 1-6 repetitions per set, heavy weights.</p>
   </div>
 
-  <div #dumbbell class="col-lg-4 mb-4">
+  <div class="col-lg-4 mb-4">
     <i class="fas fa-dumbbell fa-3x blue-text mb-1"></i>
     <h5 class="font-weight-bold title3c">Mass </h5>
     <p class="grey-text">Do 6-12 repetitions per set, medior weights.</p>
   </div>
 
-  <div class="row">
-    <div #fire class="col-lg-4 mb-4">
-      <i class="fas fa-fire fa-3x blue-text mb-1"></i>
-      <h5 class="font-weight-bold title3c">Endurance </h5>
-      <p class="grey-text">Do 12-30 repitions per set, low weights</p>
-    </div>
+  <div class="col-lg-4 mb-4">
+    <i class="fas fa-fire fa-3x blue-text mb-1"></i>
+    <h5 class="font-weight-bold title3c">Endurance </h5>
+    <p class="grey-text">Do 12-30 repitions per set, low weights</p>
   </div>
 
-  <div class="row">
-    <div #dragon class="col-lg-4 mb-4">
-      <i class="fas fa-dragon fa-3x blue-text mb-1"></i>
-      <h5 class="font-weight-bold title3c">Super set </h5>
-      <p class="grey-text">2 Exercises (sets) in succession.</p>
-    </div>
+  <div class="col-lg-4 mb-4">
+    <i class="fas fa-dragon fa-3x blue-text mb-1"></i>
+    <h5 class="font-weight-bold title3c">Super set </h5>
+    <p class="grey-text">2 Exercises (sets) in succession.</p>
   </div>
 
   <h5 class="font-weight-bold">Strenght pyramid</h5>

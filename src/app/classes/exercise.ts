@@ -7,14 +7,7 @@ export class Exercise {
     }
 
     name: string;
-    exerType: ExerType
+    exerType: string
     nrOfSets: number;
     checked: boolean;
-}
-
-export enum ExerType {
-    Strenght,
-    Mass,
-    Endurance,
-    SuperSet,
 }
