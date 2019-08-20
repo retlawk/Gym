@@ -1,4 +1,6 @@
+import { Exercise } from './exercise';
+
 export class SchemeDay {
-    id: number;
     name: string;
+    exercises: Exercise[];
 }

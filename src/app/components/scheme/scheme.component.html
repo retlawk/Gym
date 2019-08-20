@@ -1,10 +1,7 @@
 <section id="content" class="text-center my-2 overflow-auto">
   <div class="btn-group" role="group" aria-label="Basic example">
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect *ngFor="let day of schemeDays" (click)="open($event)">{{day.name}}</button>
-    <!-- <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">1</button>
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">2</button>
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">3</button>
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="open($event)">4</button> -->
+    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect 
+      *ngFor="let day of schemeDays" (click)="open($event)">{{day.name}}</button>
   </div>
 
   <table class="table .table-responsive">
@@ -19,90 +16,13 @@
 
     <tbody>
       <tr>
-        <td (click)="scroll(key)"><i class="fas fa-key blue-text mb-1"></i></td>
-        <td (click)="scroll(key)"><label style="font-weight: 500;">Deadlift</label></td>
-        <td style="font-weight: 500;">3</td>
-        <th scope="row">
+        <td (click)="scroll(key)" *ngFor="let exercise of currentDay.exercises"><i class="fas fa-key blue-text mb-1"></i></td>
+        <td *ngFor="let exercise of currentDay.exercises"><label style="font-weight: 500;">{{exercise.name}}</label></td>
+        <td *ngFor="let exercise of currentDay.exercises" style="font-weight: 500;">{{exercise.nrOfSets}}</td>
+        <th scope="row" *ngFor="let exercise of currentDay.exercises">
           <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb1">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="{{ 'wave' + i }}">
             <label class="custom-control-label" for="1cb1"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(key)"><i class="fas fa-key blue-text mb-1"></i></td>
-        <td (click)="scroll(key)"><label style="font-weight: 500;">Benchpress</label></td>
-        <td style="font-weight: 500;">3</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb2">
-            <label class="custom-control-label" for="1cb2"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
-        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Dumbbell Row</label></td>
-        <td style="font-weight: 500;">3</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb3">
-            <label class="custom-control-label" for="1cb3"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
-        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Incl Dumbbell Press</label></td>
-        <td style="font-weight: 500;">3</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb4">
-            <label class="custom-control-label" for="1cb4"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(dragon)"><i class="fas fa-dragon blue-text mb-1"></i></td>
-        <td (click)="scroll(dragon)"><label style="font-weight: 500;">Pull Up & Chest Dip</label></td>
-        <td style="font-weight: 500;">3*</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb5">
-            <label class="custom-control-label" for="1cb5"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(fire)"><i class="fas fa-fire blue-text mb-1"></i></td>
-        <td (click)="scroll(fire)"><label style="font-weight: 500;">Face Pulls</label></td>
-        <td style="font-weight: 500;">2</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb6">
-            <label class="custom-control-label" for="1cb6"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
-        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Cable Drag Curl</label></td>
-        <td style="font-weight: 500;">3</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb7">
-            <label class="custom-control-label" for="1cb7"></label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
-        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Cable Tricep Extension</label></td>
-        <td style="font-weight: 500;">3</td>
-        <th scope="row">
-          <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="1cb8">
-            <label class="custom-control-label" for="1cb8"></label>
           </div>
         </th>
       </tr>
