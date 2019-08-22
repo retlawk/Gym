@@ -11,8 +11,8 @@ import { InMemorySchemeDays } from './schemedays';
 })
 export class SchemeComponent implements OnInit {
 
-  schemeDays: SchemeDay[] = InMemorySchemeDays
-  currentDay: SchemeDay = this.schemeDays[0];
+  schemeDays: SchemeDay[];
+  currentDay: number;
 
   constructor(private router: Router, private storage: LocalStorageService) { }
 
@@ -21,16 +21,25 @@ export class SchemeComponent implements OnInit {
       window.scrollTo(0, 0)
     });
 
-    // this.cbService.getCbs().forEach(function(cbId) {
-    //   if (document.getElementById(cbId) !== null){
-    //     document.getElementById(cbId)['checked'] = true;
-    //   }
-    // });
+    this.schemeDays = this.storage.getSchemeDays();
+    console.log(this.schemeDays);
+    if (this.schemeDays == [] || this.schemeDays === null || this.schemeDays === undefined) {
+      this.storage.setSchemeDays(InMemorySchemeDays);
+    }
+    this.currentDay = 0;
+
+    this.schemeDays.forEach(function(schemeDay) {
+      schemeDay.exercises.forEach(function(exercise) {
+        if (document.getElementById(exercise.name) !== null && exercise.checked == true) {
+          document.getElementById(exercise.name)['checked'] = true;
+        }
+      })
+    });
   }
 
-  public open(event) {
+  public openScheme(event) {
     console.log('scheme: ' + event.srcElement.innerText);
-    let schemeDay = event.srcElement.innerText;
+    this.schemeDays[this.currentDay] = this.schemeDays.filter(x => x.name === event.srcElement.innerText)[0];
   }
 
   scroll(el: HTMLElement) {
@@ -39,16 +48,23 @@ export class SchemeComponent implements OnInit {
   }
 
   cbCheck(event) {
-    let cb = event['srcElement']['id'];
-    this.storage.toggleCb(cb);
+    let cbName = event['srcElement']['id'];
+    console.log(cbName);
+    if (this.schemeDays[this.currentDay].exercises.find(x => x.name == cbName).checked){
+      this.schemeDays[this.currentDay].exercises.find(x => x.name == cbName).checked = false;
+    }
+    else {
+      this.schemeDays[this.currentDay].exercises.find(x => x.name == cbName).checked = true;
+    }
+    this.storage.setSchemeDays(this.schemeDays);
   }
 
   clear(){
-    this.storage.getCbs().forEach(function (cbId) {
-      if (document.getElementById(cbId) !== null && cbId.startsWith('1')) {
-        document.getElementById(cbId)['checked'] = false;
-      }
-    });
-    this.storage.clearCbs();
+    // this.storage.getCbs().forEach(function (cbId) {
+    //   if (document.getElementById(cbId) !== null && cbId.startsWith('1')) {
+    //     document.getElementById(cbId)['checked'] = false;
+    //   }
+    // });
+    // this.storage.clearCbs();
   }
 }

@@ -1,7 +1,7 @@
 <section id="content" class="text-center my-2 overflow-hidden">
   <div class="btn-group" role="group" aria-label="Basic example">
-    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect *ngFor="let day of schemeDays"
-      (click)="open($event)">{{day.name}}</button>
+    <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect 
+    *ngFor="let day of schemeDays" (click)="openScheme($event)">{{day.name}}</button>
   </div>
 
   <table class="table .table-responsive overflow-hidden">
@@ -15,7 +15,7 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let exercise of currentDay.exercises; let i = index">
+      <tr *ngFor="let exercise of schemeDays[currentDay].exercises; let i = index">
         <td (click)="scroll(key)" [ngSwitch]="exercise.exerType">
           <i *ngSwitchCase="'Strenght'" class="fas fa-key blue-text mb-1"></i>
           <i *ngSwitchCase="'Mass'" class="fas fa-dumbbell blue-text mb-1"></i>
