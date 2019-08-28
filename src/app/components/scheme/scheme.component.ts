@@ -20,21 +20,25 @@ export class SchemeComponent implements OnInit {
     this.router.events.subscribe(() => {
       window.scrollTo(0, 0)
     });
-
+    
+    this.storage.setSchemeDays(InMemorySchemeDays);
     this.schemeDays = this.storage.getSchemeDays();
     console.log(this.schemeDays);
-    if (this.schemeDays == [] || this.schemeDays === null || this.schemeDays === undefined) {
-      this.storage.setSchemeDays(InMemorySchemeDays);
-    }
-    this.currentDay = 0;
 
-    this.schemeDays.forEach(function(schemeDay) {
-      schemeDay.exercises.forEach(function(exercise) {
-        if (document.getElementById(exercise.name) !== null && exercise.checked == true) {
-          document.getElementById(exercise.name)['checked'] = true;
-        }
-      })
-    });
+    // if (this.schemeDays == [] || this.schemeDays === null || this.schemeDays === undefined) {
+    //   this.storage.setSchemeDays(InMemorySchemeDays);
+    // }
+    // this.currentDay = 0;
+
+    console.log(this.schemeDays);
+
+    // this.schemeDays.forEach(function(schemeDay) {
+    //   schemeDay.exercises.forEach(function(exercise) {
+    //     if (document.getElementById(exercise.name) !== null && exercise.checked == true) {
+    //       document.getElementById(exercise.name)['checked'] = true;
+    //     }
+    //   })
+    // });
   }
 
   public openScheme(event) {
