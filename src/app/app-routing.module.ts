@@ -16,9 +16,12 @@ import { Lower201905Component } from './archive-components/lower2019-05/lower201
 import { Upper201906Component } from './archive-components/upper2019-06/upper2019-06.component';
 import { Lower201906Component } from './archive-components/lower2019-06/lower2019-06.component';
 import { Lower201907Component } from './archive-components/lower2019-07/lower2019-07.component';
+import { SchemeComponent } from './components/scheme/scheme.component';
+import { Upper201907Component } from './archive-components/upper2019-07/upper2019-07.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'scheme', component: SchemeComponent },
   { path: 'day1', component: Day1Component },
   { path: 'day2', component: Day2Component },
   { path: 'day3', component: Day3Component },
@@ -33,7 +36,7 @@ const routes: Routes = [
   { path: 'archive-lower2019-05', component: Lower201905Component },
   { path: 'archive-upper2019-06', component: Upper201906Component },
   { path: 'archive-lower2019-06', component: Lower201906Component },
-  { path: 'archive-lower2019-07', component: Lower201907Component },
+  { path: 'archive-upper2019-07', component: Upper201907Component },
   { path: 'archive-lower2019-07', component: Lower201907Component },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }

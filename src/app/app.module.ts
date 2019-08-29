@@ -28,6 +28,7 @@ import { Day1Component } from './components/day1/day1.component';
 import { Day2Component } from './components/day2/day2.component';
 import { Day3Component } from './components/day3/day3.component';
 import { Day4Component } from './components/day4/day4.component';
+import { SchemeComponent } from './components/scheme/scheme.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -56,7 +57,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     Lower201906Component,
     Upper201907Component,
     Lower201907Component,
-    RulesComponent
+    RulesComponent,
+    SchemeComponent
   ],
   imports: [
     BrowserModule,
