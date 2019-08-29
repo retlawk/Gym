@@ -26,8 +26,8 @@
         <td style="font-weight: 500;">{{exercise.nrOfSets}}</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
-            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="{{i}}">
-            <label class="custom-control-label" for="{{i}}"></label>
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="day{{currentDay}}-cb{{i}}">
+            <label class="custom-control-label" for="day{{currentDay}}-cb{{i}}"></label>
           </div>
         </th>
       </tr>

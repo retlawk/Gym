@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LocalStorageService } from 'src/app/services/localstorage.service';
 import { SchemeDay } from 'src/app/classes/scheme-day';
 import { InMemorySchemeDays } from './schemedays';
+import { CheckboxService } from 'src/app/services/checkbox.service';
 
 @Component({
   selector: 'app-scheme',
@@ -14,36 +14,30 @@ export class SchemeComponent implements OnInit {
   schemeDays: SchemeDay[];
   currentDay: number;
 
-  constructor(private router: Router, private storage: LocalStorageService) { }
+  constructor(private router: Router, private cbService: CheckboxService) { }
 
   ngOnInit() {
     this.router.events.subscribe(() => {
       window.scrollTo(0, 0)
     });
     
-    this.storage.setSchemeDays(InMemorySchemeDays);
-    this.schemeDays = this.storage.getSchemeDays();
-    console.log(this.schemeDays);
+    this.schemeDays = InMemorySchemeDays;
+    this.currentDay = 0;
 
-    // if (this.schemeDays == [] || this.schemeDays === null || this.schemeDays === undefined) {
-    //   this.storage.setSchemeDays(InMemorySchemeDays);
-    // }
-    // this.currentDay = 0;
-
-    console.log(this.schemeDays);
-
-    // this.schemeDays.forEach(function(schemeDay) {
-    //   schemeDay.exercises.forEach(function(exercise) {
-    //     if (document.getElementById(exercise.name) !== null && exercise.checked == true) {
-    //       document.getElementById(exercise.name)['checked'] = true;
-    //     }
-    //   })
-    // });
+    this.checkPersistedCheckboxes()
   }
 
-  public openScheme(event) {
-    console.log('scheme: ' + event.srcElement.innerText);
-    this.schemeDays[this.currentDay] = this.schemeDays.filter(x => x.name === event.srcElement.innerText)[0];
+  openScheme(event) {
+    this.currentDay = event.srcElement.innerText - 1;
+    this.checkPersistedCheckboxes()
+  }
+
+  checkPersistedCheckboxes() {
+    this.cbService.getCbs().forEach(function (cbId) {
+      if (document.getElementById(cbId) !== null) {
+        document.getElementById(cbId)['checked'] = true;
+      }
+    });
   }
 
   scroll(el: HTMLElement) {
@@ -53,22 +47,15 @@ export class SchemeComponent implements OnInit {
 
   cbCheck(event) {
     let cbName = event['srcElement']['id'];
-    console.log(cbName);
-    if (this.schemeDays[this.currentDay].exercises.find(x => x.name == cbName).checked){
-      this.schemeDays[this.currentDay].exercises.find(x => x.name == cbName).checked = false;
-    }
-    else {
-      this.schemeDays[this.currentDay].exercises.find(x => x.name == cbName).checked = true;
-    }
-    this.storage.setSchemeDays(this.schemeDays);
+    this.cbService.toggleCb(cbName);
   }
 
   clear(){
-    // this.storage.getCbs().forEach(function (cbId) {
-    //   if (document.getElementById(cbId) !== null && cbId.startsWith('1')) {
-    //     document.getElementById(cbId)['checked'] = false;
-    //   }
-    // });
-    // this.storage.clearCbs();
+    this.cbService.getCbs().forEach(function (cbId) {
+      if (document.getElementById(cbId) !== null) {
+        document.getElementById(cbId)['checked'] = false;
+      }
+    });
+    this.cbService.clearCbs();
   }
 }
