@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
-import { SchemeDay } from '../classes/scheme-day';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService {
-  private schemeDays: Array<SchemeDay>;
   private localStorage: Storage;
 
   constructor() { 
-    this.schemeDays = new Array<SchemeDay>();
     this.localStorage = window.localStorage;
 
     let dataAge = new Date(JSON.parse(this.localStorage.getItem('dataAge')));
@@ -25,16 +22,30 @@ export class LocalStorageService {
     }
   }
 
-  setSchemeDays(schemeDays: SchemeDay[]): void {
-    this.localStorage.setItem('SchemeDays', JSON.stringify(schemeDays));
+  getItem(id: string): string {
+    return localStorage.getItem(id);
   }
 
-  getSchemeDays(): Array<SchemeDay> {
-    this.schemeDays = JSON.parse(this.localStorage.getItem('SchemeDays'));
-    if (this.schemeDays === undefined || this.schemeDays === null) {
-      this.schemeDays = new Array<SchemeDay>();
-    }
-    return this.schemeDays;
+  getAllPersistedItems(): Array<string> {
+    let allItems = new Array<string>();
+    
+    var keys = Object.keys(localStorage); 
+    keys.forEach (key => {
+      allItems.push(key);
+    });
+
+    return allItems;
   }
 
+  persistItem(id: string, value: string): void {
+    this.localStorage.setItem(id, value);
+  }
+
+  removeItem(id: string): void {
+    this.localStorage.removeItem(id);
+  }
+
+  clear() {
+    this.localStorage.clear();
+  }
 }

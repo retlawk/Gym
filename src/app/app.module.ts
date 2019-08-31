@@ -24,10 +24,10 @@ import { Upper201906Component } from './archive-components/upper2019-06/upper201
 import { Lower201906Component } from './archive-components/lower2019-06/lower2019-06.component';
 import { Upper201907Component } from './archive-components/upper2019-07/upper2019-07.component';
 import { Lower201907Component } from './archive-components/lower2019-07/lower2019-07.component';
-import { Day1Component } from './components/day1/day1.component';
-import { Day2Component } from './components/day2/day2.component';
-import { Day3Component } from './components/day3/day3.component';
-import { Day4Component } from './components/day4/day4.component';
+import { Day1Component } from './archive-components/day1-2019-08/day1.component';
+import { Day2Component } from './archive-components/day2-2019-08/day2.component';
+import { Day3Component } from './archive-components/day3-2019-08/day3.component';
+import { Day4Component } from './archive-components/day4-2019-08/day4.component';
 import { SchemeComponent } from './components/scheme/scheme.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
