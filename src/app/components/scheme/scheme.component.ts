@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SchemeDay } from 'src/app/classes/scheme-day';
-import { InMemorySchemeSeptember } from './schemeSeptember';
+import { InMemorySchemeSeptember } from './schemeLateSeptember';
 import { LocalStorageService } from 'src/app/services/localstorage.service';
 
 @Component({
