@@ -39,7 +39,7 @@ export let InMemorySchemeSeptember: SchemeDay[] = [
       new Exercise("Wide Grib Row", "Mass", 3),
       new Exercise("Incl Benchpress", "Strenght", 3),
       new Exercise("Fly & Squeeze", "SuperSet", 3),
-      new Exercise("Shoulder Press", "Strenght", 3),
+      new Exercise("Tight Grib Benchpress", "Strenght", 3),
       new Exercise("Dumbbell Curls", "Mass", 3),
       new Exercise("Skullcrushers", "Mass", 3)
     ]
