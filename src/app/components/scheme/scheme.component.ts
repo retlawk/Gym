@@ -22,7 +22,11 @@ export class SchemeComponent implements OnInit {
     
     this.schemeDays = InMemorySchemeSeptember;
     this.currentDay = Number(this.storageService.getItem("currentDay"));
+<<<<<<< HEAD
     if (this.currentDay === null || this.currentDay < 0|| isNaN(this.currentDay)) this.currentDay = 0;
+=======
+    if (this.currentDay === null || this.currentDay < 0 || isNaN(this.currentDay)) this.currentDay = 0;
+>>>>>>> develop
   }
 
   ngAfterViewInit(): void {
