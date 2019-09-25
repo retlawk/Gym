@@ -3,7 +3,7 @@ import { Exercise } from 'src/app/classes/exercise';
 
 export let InMemorySchemeSeptember: SchemeDay[] = [
   {
-    name: 'D1', exercises: [
+    name: '1', exercises: [
       new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Benchpress", "Strenght", 3),
       new Exercise("Incl dumbell press", "Mass", 3),
@@ -17,7 +17,7 @@ export let InMemorySchemeSeptember: SchemeDay[] = [
     ]
   },
   {
-    name: 'D2', exercises: [
+    name: '2', exercises: [
       new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Mat workouts", "Endurance", 10),
       new Exercise("Oblique crunches", "Mass", 2),
@@ -31,7 +31,7 @@ export let InMemorySchemeSeptember: SchemeDay[] = [
     ]
   },
   {
-    name: 'D3', exercises: [
+    name: '3', exercises: [
       new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Pull Up & Chest Dip", "SuperSet", 3),
       new Exercise("Bent Over Rows", "Mass", 3),
@@ -45,7 +45,7 @@ export let InMemorySchemeSeptember: SchemeDay[] = [
     ]
   },
   {
-    name: 'D4', exercises: [
+    name: '4', exercises: [
       new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Abs Machine", "Mass", 3),
       new Exercise("Leg raises", "Mass", 3),
