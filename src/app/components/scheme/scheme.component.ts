@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SchemeDay } from 'src/app/classes/scheme-day';
-import { InMemorySchemeSeptember } from './schemeLateSeptember';
+import { InMemorySchemeOctober } from './schemeOctober';
 import { LocalStorageService } from 'src/app/services/localstorage.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class SchemeComponent implements OnInit {
       window.scrollTo(0, 0)
     });
     
-    this.schemeDays = InMemorySchemeSeptember;
+    this.schemeDays = InMemorySchemeOctober;
     this.currentDay = Number(this.storageService.getItem("currentDay"));
     if (this.currentDay === null || this.currentDay < 0 || isNaN(this.currentDay)) this.currentDay = 0;
   }

@@ -1,7 +1,7 @@
 <section id="content" class="text-center my-2 overflow-hidden">
   <div class="btn-group" role="group" aria-label="Basic example">
     <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect 
-    *ngFor="let day of schemeDays" (click)="openScheme($event)">{{day.name}}</button>
+    *ngFor="let day of schemeDays" (click)="openScheme($event)">{{day.dayNumber}}</button>
   </div>
 
   <table class="table .table-responsive overflow-hidden">
