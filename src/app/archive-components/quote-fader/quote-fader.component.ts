@@ -22,15 +22,19 @@ export class QuoteFaderComponent implements OnInit {
       .style("text-align", 'center')
       .style("color", 'rgb(53, 92, 179)');
 
-    let quotes = ["Father, forgive me for the gains i'm about to receive.",
+    let quotes = [
+      "Father, forgive me for the gains i'm about to receive.",
       "Building cardiovascular endurance, aka the ability to lose gains.",
       "Life has it's ups and downs, we call them reps.",
       "No matter how hard you try, you'll never be as big as your pump.",
       "Reps for jesus.",
-      "Bro, do you even lift?"];
+      "Bro, do you even lift?",
+      "Welcome to the iron temple",
+      "The weights are not heavy, it's all feelings you have",
+      "Skipping gym, Whey man?"
+    ];
 
     let i = 0;
-
     this.startQuoteFader(quoteFader, quotes, i);
   }
 
