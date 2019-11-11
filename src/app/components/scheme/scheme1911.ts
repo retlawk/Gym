@@ -23,8 +23,8 @@ export let InMemoryScheme1911: SchemeDay[] = [
       new Exercise("Flyes & Close Grib", "Mass", 3),
       new Exercise("Incline Dumbbell Press", "Mass", 3),
       new Exercise("Shoulder Press", "Strenght", 3),
-      new Exercise("Skull crushers", "Mass", 3),
-      new Exercise("One/two arm tricep extensions", "SuperSet", 3),
+      new Exercise("Skull Crushers", "Mass", 3),
+      new Exercise("Tricep Extensions", "SuperSet", 3),
       new Exercise("Lateral & Front Raises", "Endurance", 3),
       new Exercise("Bent Over Raise", "Endurance", 3)
     ]
@@ -34,7 +34,7 @@ export let InMemoryScheme1911: SchemeDay[] = [
       new Exercise("Mat Workouts", "Endurance", 10),
       new Exercise("Barbell Squat", "Strenght", 4),
       new Exercise("Leg & Calve Press", "Mass", 4),
-      new Exercise("Dumbbell Walking Lunge", "Endurance", 2),
+      new Exercise("Walking Lunges", "Endurance", 2),
       new Exercise("Bicep & Hammer Curl", "SuperSet", 3),
       new Exercise("Cable Drag Curl", "Mass", 3),
       new Exercise("Leg Extensions", "Mass", 3),
@@ -51,8 +51,8 @@ export let InMemoryScheme1911: SchemeDay[] = [
       new Exercise("Hand Stand Push-Up", "Strenght", 3),
       new Exercise("Close Grib Pull Ups", "Mass", 3),
       new Exercise("Bench Dips", "Endurance", 3),
-      new Exercise("Skull crushers", "Mass", 3),
-      new Exercise("One/two arm tricep extensions", "SuperSet", 3),
+      new Exercise("Skull Crushers", "Mass", 3),
+      new Exercise("Tricep Extensions", "SuperSet", 3),
       new Exercise("Face Pulls", "Endurance", 3)
     ]
   }
