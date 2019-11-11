@@ -4,6 +4,7 @@ import { Exercise } from 'src/app/classes/exercise';
 export let InMemoryScheme1911: SchemeDay[] = [
   {
     dayNumber: 1, exercises: [
+      new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Mat Workouts", "Endurance", 10),
       new Exercise("Deadlift", "Strenght", 3),
       new Exercise("Back Extension", "Endurance", 3),
@@ -17,6 +18,7 @@ export let InMemoryScheme1911: SchemeDay[] = [
   },
   {
     dayNumber: 2, exercises: [
+      new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Abs Machine", "Mass", 3),
       new Exercise("Leg Raises", "Endurance", 3),
       new Exercise("Benchpress", "Strenght", 3),
@@ -31,6 +33,7 @@ export let InMemoryScheme1911: SchemeDay[] = [
   },
   {
     dayNumber: 3, exercises: [
+      new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Mat Workouts", "Endurance", 10),
       new Exercise("Barbell Squat", "Strenght", 4),
       new Exercise("Leg & Calve Press", "Mass", 4),
@@ -44,6 +47,7 @@ export let InMemoryScheme1911: SchemeDay[] = [
   },
   {
     dayNumber: 4, exercises: [
+      new Exercise("Warming up", "SuperSet", 1),
       new Exercise("Abs Machine", "Mass", 3),
       new Exercise("Leg Raises", "Endurance", 3),
       new Exercise("Wide Grib Pull Ups", "Strenght", 3),
