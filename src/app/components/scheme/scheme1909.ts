@@ -1,7 +1,7 @@
 import { SchemeDay } from 'src/app/classes/scheme-day';
 import { Exercise } from 'src/app/classes/exercise';
 
-export let InMemorySchemeSeptember: SchemeDay[] = [
+export let InMemoryScheme1909: SchemeDay[] = [
   {
     dayNumber: 1, exercises: [
       new Exercise("Deadlift", "Strenght", 3),
