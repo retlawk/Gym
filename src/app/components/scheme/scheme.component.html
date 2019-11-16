@@ -22,7 +22,7 @@
           <i *ngSwitchCase="'Endurance'" class="fas fa-fire blue-text mb-1"></i>
           <i *ngSwitchCase="'SuperSet'" class="fas fa-dragon blue-text mb-1"></i>
         </td>
-        <td><label style="font-weight: 400;">{{exercise.name}}</label></td>
+        <td><a href="{{exercise.url}}" target="_blank">{{exercise.name}}</a></td>
         <td style="font-weight: 400;">{{exercise.nrOfSets}}</td>
         <th scope="row">
           <div class="custom-control custom-checkbox">
