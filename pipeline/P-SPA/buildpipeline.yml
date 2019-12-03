@@ -1,0 +1,30 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    ConnectedServiceName: 'todo'
+    subscriptionName: 'todo'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'P-SPA'
+    location: 'West Europe'
+    templateLocation: 'Linked artifact'
+    csmFile: 'pipeline/P-SPA/template.json'
+    csmParametersFile: 'pipeline/P-SPA/parameters.json'
+    deploymentMode: 'Incremental'
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+  displayName: 'npm install and build'

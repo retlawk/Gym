@@ -1,0 +1,150 @@
+<section id="content" class="text-center my-2">
+  <table class="table .table-responsive">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Exercise</th>
+        <th>Sets</th>
+        <th (click)='clear()' class="red-text font-weight-bold" style="font-size: 1.2em">X</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td (click)="scroll(fire)"><i class="fas fa-fire blue-text mb-1"></i></td>
+        <td (click)="scroll(fire)"><label style="font-weight: 500;">Mat workouts</label></td>
+        <td style="font-weight: 500;">10</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb1">
+            <label class="custom-control-label" for="2cb1"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(key)"><i class="fas fa-key blue-text mb-1"></i></td>
+        <td (click)="scroll(key)"><label style="font-weight: 500;">Barbell Squat</label></td>
+        <td style="font-weight: 500;">3</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb2">
+            <label class="custom-control-label" for="2cb2"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(key)"><i class="fas fa-key blue-text mb-1"></i></td>
+        <td (click)="scroll(key)"><label style="font-weight: 500;">Shoulder Press</label></td>
+        <td style="font-weight: 500;">3</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb3">
+            <label class="custom-control-label" for="2cb3"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(dragon)"><i class="fas fa-dragon blue-text mb-1"></i></td>
+        <td (click)="scroll(dragon)"><label style="font-weight: 500;">Leg & Calve Press</label></td>
+        <td style="font-weight: 500;">3*</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb4">
+            <label class="custom-control-label" for="2cb4"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Pullover</label></td>
+        <td style="font-weight: 500;">3</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb5">
+            <label class="custom-control-label" for="2cb5"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Dumbbell Shrug</label></td>
+        <td style="font-weight: 500;">3</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb6">
+            <label class="custom-control-label" for="2cb6"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(dragon)"><i class="fas fa-dragon blue-text mb-1"></i></td>
+        <td (click)="scroll(dragon)"><label style="font-weight: 500;">Lateral & Front Raises</label></td>
+        <td style="font-weight: 500;">3*</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb7">
+            <label class="custom-control-label" for="2cb7"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
+        <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Leg Extension</label></td>
+        <td style="font-weight: 500;">3</td>
+        <th scope="row">
+          <div class="custom-control custom-checkbox">
+            <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb8">
+            <label class="custom-control-label" for="2cb8"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+          <td (click)="scroll(dumbbell)"><i class="fas fa-dumbbell blue-text mb-1"></i></td>
+          <td (click)="scroll(dumbbell)"><label style="font-weight: 500;">Leg Curl Machine</label></td>
+          <td style="font-weight: 500;">3</td>
+          <th scope="row">
+            <div class="custom-control custom-checkbox">
+              <input (click)="cbCheck($event)" type="checkbox" class="custom-control-input" id="2cb9">
+              <label class="custom-control-label" for="2cb9"></label>
+            </div>
+          </th>
+        </tr>
+    </tbody>
+  </table>
+
+  <div #key class="col-lg-4 mb-4">
+    <i class="fas fa-key fa-3x blue-text mb-1"></i>
+    <h5 class="font-weight-bold title3c">Strenght </h5>
+    <p class="grey-text">Do 1-6 repetitions per set, heavy weights.</p>
+  </div>
+
+  <div #dumbbell class="col-lg-4 mb-4">
+    <i class="fas fa-dumbbell fa-3x blue-text mb-1"></i>
+    <h5 class="font-weight-bold title3c">Mass </h5>
+    <p class="grey-text">Do 6-12 repetitions per set, medior weights.</p>
+  </div>
+
+  <div class="row">
+    <div #fire class="col-lg-4 mb-4">
+      <i class="fas fa-fire fa-3x blue-text mb-1"></i>
+      <h5 class="font-weight-bold title3c">Endurance </h5>
+      <p class="grey-text">Do 12-30 repitions per set, low weights</p>
+    </div>
+  </div>
+
+    <div class="row">
+      <div #dragon class="col-lg-4 mb-4">
+        <i class="fas fa-dragon fa-3x blue-text mb-1"></i>
+        <h5 class="font-weight-bold title3c">Super set </h5>
+        <p class="grey-text">2 Exercises (sets) in succession.</p>
+      </div>
+    </div>
+
+    <h5 class="font-weight-bold">Strenght pyramid</h5>
+    <div class="row">
+      <div class="col-lg-12 mb-3">
+        <img src="assets/img/pyramid.jpg" class="img-fluid">
+      </div>
+    </div>
+
+</section>
