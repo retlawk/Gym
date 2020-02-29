@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1581536639991,
+  "timestamp": 1582976091031,
   "index": "/gym/index.html",
   "assetGroups": [
     {
@@ -11,11 +11,11 @@
         "/es2015-polyfills.c5dd28b362270c767b34.js",
         "/favicon.ico",
         "/index.html",
-        "/main.595fcb5d1ac71f5048e1.js",
+        "/main.754c4f69c9e55dc7d13c.js",
         "/polyfills.8bbb231b43165d65d357.js",
         "/runtime.26209474bfa8dc87a77c.js",
         "/scripts.03e042f1f102bf0e2ed8.js",
-        "/styles.effb4df7fb0b5de95b5f.css"
+        "/styles.86126dade03647ff604b.css"
       ],
       "patterns": []
     },
@@ -160,12 +160,12 @@
     "/fa-solid-900.a7140145ebaaf5fb14e4.woff": "964d5b16950adecf14e632adf9270772031ecb9d",
     "/fa-solid-900.ff8d9f8adb0d09f11d48.ttf": "75389055ff16f50e13c46b95da3c59af091f34c1",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "0b7e189082d1f712e4d0b34ddb910dc2d537eea0",
-    "/main.595fcb5d1ac71f5048e1.js": "90bb580ebfa6bfc5c1294bed166601b0a0113a54",
+    "/index.html": "16c544c0dede50e980f9cc2dbb6060b6ce4a39d7",
+    "/main.754c4f69c9e55dc7d13c.js": "348d44e4f3a3bfd61c19eb378f6275d82c35821f",
     "/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/scripts.03e042f1f102bf0e2ed8.js": "ba281a9af413e5f1a813cfd2d8b99dc9a0245b32",
-    "/styles.effb4df7fb0b5de95b5f.css": "ffd9093eb2155070f8932dec2534fd0f09943028"
+    "/styles.86126dade03647ff604b.css": "a3534a996435fc688741c7f71437c35ea3d72998"
   },
   "navigationUrls": [
     {
